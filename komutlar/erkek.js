@@ -66,7 +66,7 @@ let embed3 = new MessageEmbed()
 .setColor('WHITE')
 
 .setDescription(`
-• <a:kraltac:740610303628279808> ${kullanıcı} :planta_gul: 740610303628279808>  adlı kişinin kaydı başarıyla yapıldı.
+• <a:planta_siyahtac:789879331391799306> ${kullanıcı} :planta_gul: 740610303628279808>  adlı kişinin kaydı başarıyla yapıldı.
 • İsim Yaş • **${isim} ${yaş}**
 • Verilen Roller • <@&${ayarlar.erkekROL}> , <@&${ayarlar.erkekICON}>
 • Alınan Roller • <@&${ayarlar.kayıtsızROL}>
