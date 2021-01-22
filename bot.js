@@ -119,7 +119,7 @@ client.on("ready", () => {//splashen
 client.on("guildMemberAdd", member => {
   let tag = ayarlar.tag;
   //splashen
-  member.setNickname(`${tag} İsim • Yaş`);
+  member.setNickname(`${tag} İsim Yaş`);
 });
 
 // İSİM YAŞ İSİM DEĞİŞTİRME SON
@@ -209,3 +209,11 @@ client.channels.cache.find(x => x.id === kanal).send(giris)
 //splashen
 
 client.login(ayarlar.token);
+
+client.on("ready", async function() {
+const voiceChannel = "795970687188992052"
+client.channels.cache.get(voiceChannel).join()
+.catch(err => {
+throw err;
+})
+})

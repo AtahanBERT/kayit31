@@ -7,5 +7,5 @@ let prefix = ayarlar.prefix;
 
 module.exports = client => {
   client.user.setStatus("online");
-console.log('');
+console.log('ま PŁΛЛTΛ TΞΛM');
 };
