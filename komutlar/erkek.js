@@ -43,7 +43,7 @@ const emb = new MessageEmbed()
 .setFooter('Kayıt Saati')
 .setColor(`#fffff0`)
 let tag = ayarlar.tag || ''
-message.guild.members.cache.get(kullanıcı.id).setNickname(`${tag} ${isim} • ${yaş}`)
+message.guild.members.cache.get(kullanıcı.id).setNickname(`${tag} ${isim} ${yaş}`)
 message.guild.members.cache.get(kullanıcı.id).roles.add(erkekROL)
   message.guild.members.cache.get(kullanıcı.id).roles.add(kayıtlıROL)
   if(ayarlar.erkekICON) {
@@ -66,7 +66,7 @@ let embed3 = new MessageEmbed()
 .setColor('WHITE')
 
 .setDescription(`
-• <a:kraltac:740610303628279808> ${kullanıcı} <a:kraltac:740610303628279808>  adlı kişinin kaydı başarıyla yapıldı.
+• <a:kraltac:740610303628279808> ${kullanıcı} :planta_gul: 740610303628279808>  adlı kişinin kaydı başarıyla yapıldı.
 • İsim Yaş • **${isim} ${yaş}**
 • Verilen Roller • <@&${ayarlar.erkekROL}> , <@&${ayarlar.erkekICON}>
 • Alınan Roller • <@&${ayarlar.kayıtsızROL}>
