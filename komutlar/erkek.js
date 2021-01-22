@@ -66,13 +66,13 @@ let embed3 = new MessageEmbed()
 .setColor('WHITE')
 
 .setDescription(`
-• <a:planta_siyahtac:789879331391799306> ${kullanıcı} :planta_gul: 740610303628279808>  adlı kişinin kaydı başarıyla yapıldı.
+• <a:planta_siyahtac:789879331391799306> ${kullanıcı} <a:planta_siyahtac:789879331391799306> adlı kişinin kaydı başarıyla yapıldı.
 • İsim Yaş • **${isim} ${yaş}**
 • Verilen Roller • <@&${ayarlar.erkekROL}> , <@&${ayarlar.erkekICON}>
 • Alınan Roller • <@&${ayarlar.kayıtsızROL}>
 
 `)
-message.channel.send(embed3).then(m => m.delete({timeout : '5000'}))
+message.channel.send(embed3).then(m => m.delete({timeout : '7000'}))
 
 
 }
