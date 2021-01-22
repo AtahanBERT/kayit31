@@ -6,9 +6,9 @@ const ayarlar = require("../ayarlar.json");
 let prefix = ayarlar.prefix;
 
 module.exports = client => {
-  client.user.setStatus("dnd");
+  client.user.setStatus("online");
 
-client.user.setActivity(`ま PŁΛЛTΛ TΞΛM`, { type:'PLAYING' })
+client.user.setActivity(`ま PŁΛЛTΛ TΞΛM`)
 
 console.log('');
 };
