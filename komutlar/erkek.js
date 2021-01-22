@@ -55,7 +55,7 @@ message.guild.members.cache.get(kullanıcı.id).send(emb.setDescription(`• Kay
  
 let embed2 = new MessageEmbed()
 .setDescription(`
-• ${kullanıcı} adlı kullanıcı **${isim} • ${yaş}** olarak sunucumuza kayıt oldu. 
+• ${kullanıcı} adlı kullanıcı **${isim} ${yaş}** olarak sunucumuza kayıt oldu. 
 • Kaydını yapan kişi : ${message.author}
 `)
 
@@ -67,7 +67,7 @@ let embed3 = new MessageEmbed()
 
 .setDescription(`
 • <a:kraltac:740610303628279808> ${kullanıcı} <a:kraltac:740610303628279808>  adlı kişinin kaydı başarıyla yapıldı.
-• İsim Yaş • **${isim} • ${yaş}**
+• İsim Yaş • **${isim} ${yaş}**
 • Verilen Roller • <@&${ayarlar.erkekROL}> , <@&${ayarlar.erkekICON}>
 • Alınan Roller • <@&${ayarlar.kayıtsızROL}>
 
