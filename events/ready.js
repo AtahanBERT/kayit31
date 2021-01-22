@@ -1,4 +1,4 @@
-const chalk = require("chalk");
+const moement = require("chalk");
 const moment = require("moment");
 const Discord = require("discord.js");
 const ayarlar = require("../ayarlar.json");
@@ -7,5 +7,8 @@ let prefix = ayarlar.prefix;
 
 module.exports = client => {
   client.user.setStatus("online");
-console.log('ま PŁΛЛTΛ TΞΛM');
+
+client.user.setActivity(`ま PŁΛЛTΛ TΞΛM`, { type:'PLAYING' })
+
+console.log('');
 };
