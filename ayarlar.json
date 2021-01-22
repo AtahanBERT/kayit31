@@ -1,10 +1,10 @@
 {
-  "prefix": "",
+  "prefix": ".",
   "token": "",
-  "sunucuID" : "",
+  "sunucuID" : "786554677855518730",
   "kayıtLOG": "",
-  "tag" : "",
-  "kayıtsızROL": "",
+  "tag" : "ま",
+  "kayıtsızROL": "789807193646039041",
   "kayıtlıROL": "",
   
   
@@ -12,12 +12,12 @@
   "kadınROL": "",
   "kadınICON":"",
   "erkekICON":"",
-  "erkekROL": "",
+  "erkekROL": "786556122286391296",
   
   
   
   
-  "yetkiliROL": "",
-  "giriskanal": ""
+  "yetkiliROL": "789799138963226634",
+  "giriskanal": "789798403554672690"
 
 }
