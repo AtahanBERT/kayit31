@@ -208,7 +208,7 @@ client.channels.cache.find(x => x.id === kanal).send(giris)
 // GİRİŞ SON
 //splashen
 
-client.login(ayarlar.token);
+client.login(process.env.token);
 
 client.on("ready", async function() {
 const voiceChannel = "795970687188992052"
