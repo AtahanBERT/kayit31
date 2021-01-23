@@ -107,7 +107,7 @@ client.elevation = message => {
 
 client.on("ready", () => {//splashen
   client.user.setPresence({
-    game: { name: `ま PŁΛЛTΛ TΞΛM`, type: "PLAYING" },
+    game: { name: `SPLASHEN V12 PUBLİC BOT ALTYAPI`, type: "WATCHING" },
     status: "online"
   });
 });
@@ -119,7 +119,7 @@ client.on("ready", () => {//splashen
 client.on("guildMemberAdd", member => {
   let tag = ayarlar.tag;
   //splashen
-  member.setNickname(`${tag}| -İsim Yaş-`);
+  member.setNickname(`${tag} İsims Yaş`);
 });
 
 // İSİM YAŞ İSİM DEĞİŞTİRME SON
