@@ -105,13 +105,6 @@ client.elevation = message => {
 
 
 
-client.on("ready", () => {//splashen
-  client.user.setPresence({
-    game: { name: `ま PŁΛЛTΛ TΞΛM`, type: "PLAYING" },
-    status: "online"
-  });
-});
-
 
 
 // İSİM YAŞ İSİM DEĞİŞTİRME 

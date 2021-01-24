@@ -12,3 +12,4 @@ client.user.setActivity(`ま PŁΛЛTΛ TΞΛM`)
 
 console.log('');
 };
+
