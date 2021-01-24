@@ -72,7 +72,7 @@ let embed3 = new MessageEmbed()
 • Alınan Roller • <@&${ayarlar.kayıtsızROL}>
 
 `)
-message.channel.send(embed3).then(m => m.delete({timeout : '7000'}))
+message.channel.send(embed3).then(m => m.delete({timeout : '10000'}))
 
 
 }
