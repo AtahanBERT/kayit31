@@ -8,7 +8,7 @@ let prefix = ayarlar.prefix;
 module.exports = client => {
   client.user.setStatus("online");
 
-client.user.setActivity(`ま PŁΛЛTΛ TΞΛM`)
+client.user.setActivity(`ま PŁΛЛTΛ TΞΛM discord.gg/2xz5bsvFyp`)
 
 console.log('');
 };
