@@ -191,7 +191,7 @@ if (tarih > 1296000000) kontrol = '<a:tik3:756946140825649214> Bu Kullanıcı **
  » • <a:duyur:766652129678721074> Ses teyit odasında kaydınızı yaptırabilirsiniz. 
 
 `)//splashen
-    .setImage('https://i.pinimg.com/originals/8c/9a/07/8c9a079986a4ce112882fea6db3ffdee.gif')
+    .setImage('https://tenor.com/view/planta-team-gif-19627352')
     .setTimestamp()
     
       client.channels.cache.find(x => x.id === kanal).send(`<@&${ayarlar.yetkiliROL}>`)
