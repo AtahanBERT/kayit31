@@ -73,11 +73,6 @@ client.load = command => {
   });
 };
 
-client.on("guildMemberUpdate", async (client, OLD, NEW) => {
-if(!OLD.premiumSince && NEW.premiumSince) {
-client.channels.cache.get('786556292935319552').send(`${NEW.user.username} Adlı Kullanıcı Sunucumuza Boost Bastı! Teşekkür Ederiz <3`)
-}
-})
 
 client.unload = command => {
   return new Promise((resolve, reject) => {
