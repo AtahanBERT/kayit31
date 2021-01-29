@@ -292,4 +292,4 @@ client.on("userUpdate", async (oldUser, newUser) => {
     }
 
   }
-})
+});
