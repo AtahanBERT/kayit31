@@ -192,7 +192,7 @@ if (tarih > 1296000000) kontrol = ':planta_tik: Bu Kullanıcı **Güvenli**'
  » • <a:planta_siyahtac:789879331391799306> Ses teyit odasında kaydınızı yaptırabilirsiniz. 
 
 `)//splashen
-    .setImage('https://tenor.com/view/planta-team-gif-19627352')
+    .setImage('https://tenor.com/view/planta-team-gif-19627352 ')
     .setTimestamp()
     
       client.channels.cache.find(x => x.id === kanal).send(`<@&${ayarlar.yetkiliROL}>`)
