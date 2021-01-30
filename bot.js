@@ -205,8 +205,14 @@ client.channels.cache.find(x => x.id === kanal).send(giris)
 
 client.login(process.env.token);
 
-snmsmsms
 
+client.on("ready", async function() {
+const voiceChannel = "795970687188992052"
+client.channels.cache.get(voiceChannel).join()
+.catch(err => {
+throw err;
+})
+});
 
 
 client.on("guildCreate", async guild => {
