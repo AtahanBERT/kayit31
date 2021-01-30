@@ -185,7 +185,7 @@ if (tarih > 1296000000) kontrol = '<a:plantatikm:789863491728965662> Bu Kullanı
  
  » • <a:planta_siyahtac:789879331391799306> <@&${ayarlar.yetkiliROL}> rolündekiler seninle ilgilenecektir.
  
- » •   ${kontrol} 
+ » •  ${kontrol} 
  
  » • <a:planta_siyahtac:789879331391799306> Hesabın Oluşturulma Tarihi: \n • \` ${moment(member.user.createdAt).format("YYYY DD MMMM dddd (hh:mm:ss)")} \`
  
