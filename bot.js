@@ -176,9 +176,10 @@ if (tarih > 1296000000) kontrol = '<a:plantatikm:789863491728965662> Bu Kullanı
   moment.locale("tr");
   let kanal1 = client.channels.cache.find(x => x.id === kanal);
     let giris = new Discord.MessageEmbed()
-    .setDescription(`
+    .setDescription
+ (`
  » • <a:planta_siyahtac:789879331391799306> Hoşgeldin ${member}
- 
+    
  » • <a:planta_siyahtac:789879331391799306> Seninle birlikte **${member.guild.memberCount}** kişiyiz.
  
  » • [ **${ayarlar.tag}** ] Tagımızı alarak ekibimize katılabilirsin.
