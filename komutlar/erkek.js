@@ -68,7 +68,7 @@ let embed3 = new MessageEmbed()
 .setDescription(`
 • <a:planta_siyahtac:789879331391799306> ${kullanıcı} <a:planta_siyahtac:789879331391799306> adlı kişinin kaydı başarıyla yapıldı.
 • İsim Yaş • **${isim} ${yaş}**
-• Verilen Roller • <@&${ayarlar.erkekROL}> , <@&${ayarlar.erkekICON}>
+• Verilen Roller • <@&${ayarlar.erkekROL}>
 • Alınan Roller • <@&${ayarlar.kayıtsızROL}>
 
 `)
