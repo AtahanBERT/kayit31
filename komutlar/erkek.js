@@ -13,7 +13,7 @@ exports.run = async (client, message, args) => {//splashen
 
     if(!message.member.roles.cache.has(yetkili)) return message.channel.send('Bu işlemi sadece yetkililer yapabilir')
 
-
+message.react('<a:planta_carp:809529347253600266>')
 if(!args[0]) return message.channel.send(`Bir kişiyi etiketlemelisin.`)
   
 let kullanıcı = message.mentions.users.first()
@@ -31,9 +31,11 @@ if (kurulus > 1296000000) kontrol = '<a:budur:740278066248548422> Güvenli'
   
 let isim = args[1]
 
+message.react('<a:planta_carp:809529347253600266>')
 if(!isim) return message.channel.send(`Üyenin ismini belirtmelisin.`)
 
 let yaş = args[2];
+message.react('<a:planta_carp:809529347253600266>')
 if(!yaş) return message.channel.send(`Üyenin yaşını belirtmelisin.`)
   
 const emb = new MessageEmbed()
