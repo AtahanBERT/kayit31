@@ -31,11 +31,9 @@ if (kurulus > 1296000000) kontrol = '<a:budur:740278066248548422> Güvenli'
   
 let isim = args[1]
 
-message.react('<a:planta_carp:809529347253600266>')
 if(!isim) return message.channel.send(`Üyenin ismini belirtmelisin.`)
 
 let yaş = args[2];
-message.react('<a:planta_carp:809529347253600266>')
 if(!yaş) return message.channel.send(`Üyenin yaşını belirtmelisin.`)
   
 const emb = new MessageEmbed()
@@ -55,6 +53,7 @@ message.guild.members.cache.get(kullanıcı.id).roles.add(erkekROL)
 message.guild.members.cache.get(kullanıcı.id).roles.remove(kayıtsızROL)
 message.guild.members.cache.get(kullanıcı.id).send(emb.setDescription(`• Kaydın ${message.author} tarafından yapıldı. \n • **Erkek** ve **Kayıtlı** rollerini aldın. \n • Kurallar kanalımızı okumayı unutma!`))
  
+message.react('<a:OnaylamakGif:790604217706348554>')
 let embed2 = new MessageEmbed()
 .setDescription(`
 • ${kullanıcı} adlı kullanıcı **${isim} ${yaş}** olarak sunucumuza kayıt oldu. 
