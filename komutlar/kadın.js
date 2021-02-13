@@ -13,7 +13,7 @@ exports.run = async (client, message, args) => {//splashen
 
     if(!message.member.roles.cache.has(yetkili)) return message.channel.send('Bu işlemi sadece yetkililer yapabilir')
 
-message.react('<a:planta_carp:809529347253600266>')
+message.react('<a:planta_c>')
 if(!args[0]) return message.channel.send(`Bir kişiyi etiketlemelisin.`)
   
 let kullanıcı = message.mentions.users.first()
@@ -53,7 +53,7 @@ message.guild.members.cache.get(kullanıcı.id).roles.add(kadınROL)
 message.guild.members.cache.get(kullanıcı.id).roles.remove(kayıtsızROL)
 message.guild.members.cache.get(kullanıcı.id).send(emb.setDescription(`• Kaydın ${message.author} tarafından yapıldı. \n • **Kadın** ve **Kayıtlı** rollerini aldın. \n • Kurallar kanalımızı okumayı unutma!`))
  
-message.react('<a:OnaylamakGif:790604217706348554>')
+message.react('<a:plantatik3:810180493424721921>')
 let embed2 = new MessageEmbed()
 .setDescription(`
 • ${kullanıcı} adlı kullanıcı **${isim} ${yaş}** olarak sunucumuza kayıt oldu. 
