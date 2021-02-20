@@ -13,7 +13,6 @@ exports.run = async (client, message, args) => {//splashen
 
     if(!message.member.roles.cache.has(yetkili)) return message.channel.send('Bu işlemi sadece yetkililer yapabilir')
 
-message.react('<a:planta_c>')
 if(!args[0]) return message.channel.send(`Bir kişiyi etiketlemelisin.`)
   
 let kullanıcı = message.mentions.users.first()
