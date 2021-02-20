@@ -176,22 +176,19 @@ if (tarih > 1296000000) kontrol = '<a:plantatikm:789863491728965662> Bu Kullanı
   moment.locale("tr");
   let kanal1 = client.channels.cache.find(x => x.id === kanal);
     let giris = new Discord.MessageEmbed()
-    .setDescription(`
- » • <a:planta_siyahtac:789879331391799306> Hoşgeldin ${member}
-    
- » • <a:planta_siyahtac:789879331391799306> Seninle birlikte **${member.guild.memberCount}** kişiyiz.
+    .setDescription(`» • <a:planta_siyahtac:789879331391799306> Hoşgeldin ${member}
+        
+                     » • <a:planta_siyahtac:789879331391799306> Seninle birlikte **${member.guild.memberCount}** kişiyiz.
  
- » • [ **${ayarlar.tag}** ] Tagımızı alarak ekibimize katılabilirsin.
+                     » • [ **${ayarlar.tag}** ] Tagımızı alarak ekibimize katılabilirsin.
  
- » • <a:planta_siyahtac:789879331391799306> <@&${ayarlar.yetkiliROL}> rolündekiler seninle ilgilenecektir.
+                     » • <a:planta_siyahtac:789879331391799306> <@&${ayarlar.yetkiliROL}> rolündekiler seninle ilgilenecektir.
  
- » •  ${kontrol} 
+                     » •  ${kontrol} 
  
- » • <a:planta_siyahtac:789879331391799306> Hesabın Oluşturulma Tarihi: \n • \` ${moment(member.user.createdAt).format("YYYY DD MMMM dddd (hh:mm:ss)")} \`
+                     » • <a:planta_siyahtac:789879331391799306> Hesabın Oluşturulma Tarihi: \n • \` ${moment(member.user.createdAt).format("YYYY DD MMMM dddd (hh:mm:ss)")} \`
  
- » • <a:planta_siyahtac:789879331391799306> Ses teyit odasında kaydınızı yaptırabilirsiniz. 
-
-`)//splashen
+                     » • <a:planta_siyahtac:789879331391799306> Ses teyit odasında kaydınızı yaptırabilirsiniz.`)
     .setImage('https://images-ext-2.discordapp.net/external/sKcMKrk3CMWx0rccRtVo8uoGOIX06juRHqBT3O4QCJo/https/media1.tenor.com/images/c56e262cc5781c99ab1ca33a5d0c6bfe/tenor.gif')
     .setTimestamp()
     
