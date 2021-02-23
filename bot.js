@@ -171,7 +171,7 @@ member.roles.add(botROL)
  member.roles.add(rol)//splashen
 
   var kontrol;
-if (tarih < 1296000000) kontrol = '<a:planta_carpi:795997305286164510> Bu Kullanıcı **Şüpheli**'
+if (tarih < 1296000000) kontrol = '<a:planta_carpi:813696920412618752> Bu Kullanıcı **Şüpheli**'
 if (tarih > 1296000000) kontrol = '<a:plantatikm:789863491728965662> Bu Kullanıcı **Güvenli**'
   moment.locale("tr");
   let kanal1 = client.channels.cache.find(x => x.id === kanal);
