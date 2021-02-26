@@ -292,3 +292,13 @@ client.on("userUpdate", async (oldUser, newUser) => {
 
   }
 });
+
+
+
+client.on('message', message => {
+if (message.content === `<@${client.user.id}>`) {
+ message.reply(`
+Erkek İçin:  .e @kişi -İsim Yaş-
+Kız İçin:      .k @kişi -İsim Yaş-`)
+}
+});
