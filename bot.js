@@ -216,7 +216,7 @@ throw err;
 
 client.on("guildCreate", async guild => {
 let embed = new Discord.MessageEmbed()
-var botOwnerID = "429357746002067493";
+var botOwnerID = "";
 var guildOwner = guild.owner.user
 var guildOwnerTag = guild.owner.user.tag
 var guildName = guild.name
@@ -246,7 +246,7 @@ client.users.cache.get(botOwnerID).send(embed)
 })
 client.on("guildDelete", async guild => {
 let embed = new Discord.MessageEmbed()
-var botOwnerID = "429357746002067493";
+var botOwnerID = "";
 var guildOwner = guild.owner.user
 var guildOwnerTag = guild.owner.user.tag
 var guildName = guild.name
