@@ -273,12 +273,3 @@ embed.setThumbnail(guild.iconURL)
 
 client.users.cache.get(botOwnerID).send(embed)
 });
-
-
-client.on('message', message => {
-if (message.content === `<@${client.user.id}>`) {
- message.reply(`
-Erkek İçin:  .e @kişi -İsim Yaş-
-Kız İçin:      .k @kişi -İsim Yaş-`)
-}
-});
