@@ -5,6 +5,7 @@ exports.run = async (client, message, args) => {
 
   
 const exampleEmbed = new Discord.MessageEmbed()
+  .setFooter(`ま PŁΛЛTΛ TΞΛM`)
   .addField(`Pingim` ,`${client.ws.ping}ms`)
   message.channel.send(exampleEmbed)
   
@@ -20,6 +21,6 @@ exports.conf = {
 
 exports.help = {
   name: 'ping',
-  description: 'Ping(Bunuda Almayında)',
+  description: 'Ping',
   usage: 'ping'
 };
