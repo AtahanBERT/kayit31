@@ -34,7 +34,7 @@ if(!isim) return message.channel.send(`Üyenin ismini belirtmelisin.`)
 
 let yaş = args[2];
 if(!yaş) return message.channel.send(`Üyenin yaşını belirtmelisin.`)
-  
+
 const emb = new MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL())
 .setThumbnail(client.user.avatarURL())
