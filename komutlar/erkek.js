@@ -1,7 +1,7 @@
 const { Discord, MessageEmbed} = require('discord.js')
 const db = require('quick.db');
 const ayarlar = require('../ayarlar.json')
-
+const emoji = "<a:plantacarp:815252488168931368>"
 
 exports.run = async (client, message, args) => {
 
@@ -11,14 +11,12 @@ exports.run = async (client, message, args) => {
     let yetkili = ayarlar.yetkiliROL
     let kayıtLOG = ayarlar.kayıtLOG
 
-    if(!message.member.roles.cache.has(yetkili)) return message.channel.send('Bu işlemi sadece yetkililer yapabilir')
+    if(!message.member.roles.cache.has(yetkili)) return message.channel.send(`${emoji} Bu işlemi sadece yetkililer yapabilir`)
 
-const emoji = "<a:plantacarp:815252488168931368>"
 if(!args[0]) return message.channel.send(`${emoji} Bir kişiyi etiketlemelisin.`)
 
-let embed = new MessageEmbed
 let kullanıcı = message.mentions.users.first()
-if(!kullanıcı) return message.channel.send(embed)(`${args[0]}, kullanıcısını sunucuda bulamıyorum.`)
+if(!kullanıcı) return message.channel.send(`${emoji} ${args[0]}, kullanıcısını sunucuda bulamıyorum.`)
 if(kullanıcı.bot) return;
   
   
@@ -33,10 +31,10 @@ if (kurulus > 1296000000) kontrol = '<a:budur:740278066248548422> Güvenli'
 let isim = args[1]
 
 
-if(!isim) return message.channel.send(`Üyenin ismini belirtmelisin.`)
+if(!isim) return message.channel.send(`${emoji} Üyenin ismini belirtmelisin.`)
 
 let yaş = args[2];
-if(!yaş) return message.channel.send(`Üyenin yaşını belirtmelisin.`)
+if(!yaş) return message.channel.send(`${emoji} Üyenin yaşını belirtmelisin.`)
 
 const emb = new MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL())
