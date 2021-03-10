@@ -3,7 +3,7 @@ const db = require('quick.db');
 const ayarlar = require('../ayarlar.json')
 
 
-exports.run = async (client, message, args) => {//splashen
+exports.run = async (client, message, args) => {
 
     let erkekROL = ayarlar.erkekROL 
     let kayıtsızROL = ayarlar.kayıtsızROL
@@ -13,8 +13,8 @@ exports.run = async (client, message, args) => {//splashen
 
     if(!message.member.roles.cache.has(yetkili)) return message.channel.send('Bu işlemi sadece yetkililer yapabilir')
 
-
-if(!args[0]) return message.MessageEmbed(`Bir kişiyi etiketlemelisin.`)
+const emoji = "<a:plantacarp:815252488168931368>"
+if(!args[0]) return message.channel.send(`${emoji} Bir kişiyi etiketlemelisin.`)
   
 let kullanıcı = message.mentions.users.first()
 if(!kullanıcı) return message.channel.send(`${args[0]}, kullanıcısını sunucuda bulamıyorum.`)
