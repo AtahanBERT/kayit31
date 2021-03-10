@@ -15,9 +15,10 @@ exports.run = async (client, message, args) => {
 
 const emoji = "<a:plantacarp:815252488168931368>"
 if(!args[0]) return message.channel.send(`${emoji} Bir kişiyi etiketlemelisin.`)
-  
+
+let embed = new MessageEmbed
 let kullanıcı = message.mentions.users.first()
-if(!kullanıcı) return message.channel.send(`${args[0]}, kullanıcısını sunucuda bulamıyorum.`)
+if(!kullanıcı) return message.channel.send(embed)(`${args[0]}, kullanıcısını sunucuda bulamıyorum.`)
 if(kullanıcı.bot) return;
   
   
