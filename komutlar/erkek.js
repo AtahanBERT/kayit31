@@ -1,7 +1,7 @@
 const { Discord, MessageEmbed} = require('discord.js')
 const db = require('quick.db');
 const ayarlar = require('../ayarlar.json')
-const emoji = "<a:plantacarp:815252488168931368>"
+const emoji = ayarlar.basarisizemoji
 
 exports.run = async (client, message, args) => {
 
