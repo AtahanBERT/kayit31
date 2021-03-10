@@ -191,7 +191,7 @@ if (tarih > 1296000000) kontrol = '<a:plantatikm:789863491728965662> Bu Kullanı
  
  » • <a:planta_siyahtac:789879331391799306> Ses teyit odasında kaydınızı yaptırabilirsiniz. 
 
-`)//splashen
+`)
     .setImage('https://images-ext-2.discordapp.net/external/sKcMKrk3CMWx0rccRtVo8uoGOIX06juRHqBT3O4QCJo/https/media1.tenor.com/images/c56e262cc5781c99ab1ca33a5d0c6bfe/tenor.gif')
     .setTimestamp()
     
@@ -200,7 +200,6 @@ client.channels.cache.find(x => x.id === kanal).send(giris)
     
   });
 // GİRİŞ SON
-//splashen
 
 client.login(process.env.token);
 
