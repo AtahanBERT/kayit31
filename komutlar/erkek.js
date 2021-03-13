@@ -13,7 +13,7 @@ exports.run = async (client, message, args) => {
 
     if(!message.member.roles.cache.has(yetkili)) return message.channel.send(`${emoji} Bu işlemi sadece yetkililer yapabilir`)
 
-if(!args[0]) return message.channel.send(`${emoji} Bir kişiyi etiketlemelisin.`)
+if(!args[0]) return message.channel.send(new Discord.MessageEmbed().setColor('RED').setDescription(`${emoji} Erkek olarak kaydedeceğin kullanıcıyı belirtmelisin!`))
 
 let kullanıcı = message.mentions.users.first()
 if(!kullanıcı) return message.channel.send(`${emoji} ${args[0]}, kullanıcısını sunucuda bulamıyorum.`)
