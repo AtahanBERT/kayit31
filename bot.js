@@ -272,3 +272,11 @@ embed.setThumbnail(guild.iconURL)
 
 client.users.cache.get(botOwnerID).send(embed)
 });
+
+
+client.on('message', message => {
+if (message.content === `<@${client.user.id}>`) {
+ message.reply(`${message.author},
+ Erkek İçin: .e @erkek `)
+}
+});
