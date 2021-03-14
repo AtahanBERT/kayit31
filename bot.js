@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 require("events").EventEmitter.defaultMaxListeners = 30000;
-  require("events").defaultMaxListeners = 30000;
+require("events").defaultMaxListeners = 30000;
 const client = new Discord.Client();
 const ayarlar = require("./ayarlar.json");
 const kanal = ayarlar.kanal;
@@ -153,7 +153,7 @@ member.roles.add(kayıtsızROL)
 
 // BOT OTOROL
 
-client.on('guildMemberAdd', async member => {//splashen
+client.on('guildMemberAdd', async member => {
 if(member.user.bot) {
   const botROL = ayarlar.botROL
 member.roles.add(botROL)
@@ -276,7 +276,9 @@ client.users.cache.get(botOwnerID).send(embed)
 
 client.on('message', message => {
 if (message.content === `<@${client.user.id}>`) {
- message.reply(`${message.author},
- Erkek İçin: .e @erkek `)
+ message.reply(`
+Erkek İçin: .e @erkek <isim> <yaş>
+Kız İçin:      .k @kız <isim> <yaş>
+`)
 }
 });
