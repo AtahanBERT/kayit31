@@ -15,7 +15,7 @@ if(!kullanici) return message.reply(`Lütfen bir kullanıcı giriniz! \nDoğru K
 if(!isim) return message.reply(`Lütfen bir kullanıcı adı giriniz! \nDoğru Kullanım; \`${prefix}isimdeğiştir @${client.user.username}#${client.user.discriminator} <yeni isim>\``)
 if(isim.length > 32) return message.reply(`Lütfen \`32\` karakteri geçmeyecek şekilde bir isim giriniz!`)
   
-message.guild.members.cache.get(kullanici.id).setNickname(`${isim}`)
+message.guild.members.cache.get(kullanici.id).setNickname(`${tag} ${isim}`)
 message.channel.send(`Başarılı bir şekilde \`${kullanici.username}\` adlı kişinin kullanıcı adı \`${isim}\` olarak değiştirildi.`)
 }
 
