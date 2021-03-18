@@ -2,7 +2,7 @@ const { Discord, MessageEmbed} = require('discord.js')
 const db = require('quick.db');
 const ayarlar = require('../ayarlar.json')
 const emoji = ayarlar.basarisizemoji;
-consy
+const basari = ayarlar.basariliemoji;
 
 exports.run = async (client, message, args) => {
 
