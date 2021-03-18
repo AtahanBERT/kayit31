@@ -23,7 +23,7 @@ message.channel.send(`Başarılı bir şekilde \`${kullanici.username}\` adlı k
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ['isimdegistir','ideğiş','idegis'],
+    aliases: ['isimdegistir','ideğiş','idegis','isim'],
     permLevel: 0
 }
 

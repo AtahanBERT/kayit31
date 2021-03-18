@@ -1,7 +1,8 @@
 const { Discord, MessageEmbed} = require('discord.js')
 const db = require('quick.db');
 const ayarlar = require('../ayarlar.json')
-const emoji = ayarlar.basarisizemoji
+const emoji = ayarlar.basarisizemoji;
+consy
 
 exports.run = async (client, message, args) => {
 
@@ -53,7 +54,7 @@ message.guild.members.cache.get(kullanıcı.id).roles.add(erkekROL)
 message.guild.members.cache.get(kullanıcı.id).roles.remove(kayıtsızROL)
 message.guild.members.cache.get(kullanıcı.id).send(emb.setDescription(`• Kaydın ${message.author} tarafından yapıldı. \n • **Erkek** ve **Kayıtlı** rollerini aldın. \n • Kurallar kanalımızı okumayı unutma!`))
  
-message.react('<a:plantatik3:810180493424721921>')
+message.react(basari)
 let embed2 = new MessageEmbed()
 .setDescription(`
 • ${kullanıcı} adlı kullanıcı **${isim} ${yaş}** olarak sunucumuza kayıt oldu. 
