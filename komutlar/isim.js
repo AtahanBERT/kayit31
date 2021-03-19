@@ -7,7 +7,7 @@ let basarisiz = ayarlar.basarisizemoji;
 
 exports.run = async (client, message, args) => {
 
-if (!message.member.roles.cache.has(ayarlar.yetkiliROL)) return message.reply(`Bu Komutu Kullanmak İçin **Yetkili** Olmalısın!`); 
+if (!message.member.roles.cache.get(ayarlar.yetkiliROL)) return message.reply(`Bu Komutu Kullanmak İçin **Yetkili** Olmalısın!`); 
 
 let tag = ayarlar.tag;
 let isim = args.slice(1).join(' ');
