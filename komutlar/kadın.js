@@ -11,6 +11,9 @@ exports.run = async (client, message, args) => {//splashen
     let kayıtlıROL = ayarlar.kayıtlıROL
     let yetkili = ayarlar.yetkiliROL
     let kayıtLOG = ayarlar.kayıtLOG
+    let kanal = ayarlar.giriskanal;
+  
+if(message.channel.id !== kanal) return message.react(emoji);
 
     if(!message.member.roles.cache.has(yetkili)) return message.channel.send(`${emoji} Bu işlemi sadece yetkililer yapabilir`)
 
