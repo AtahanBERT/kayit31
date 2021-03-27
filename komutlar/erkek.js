@@ -6,7 +6,8 @@ const basari = ayarlar.basariliemoji;
 
 exports.run = async (client, message, args) => {
 
-    let erkekROL = ayarlar.erkekROL 
+    let erkekROL = ayarlar.erkekROL
+    let fakeROL = ayarlar.fakeROL
     let kayıtsızROL = ayarlar.kayıtsızROL
     let kayıtlıROL = ayarlar.kayıtlıROL
     let yetkili = ayarlar.yetkiliROL
@@ -55,6 +56,7 @@ message.guild.members.cache.get(kullanıcı.id).roles.add(erkekROL)
       message.guild.members.cache.get(kullanıcı.id).roles.add(erkekICON)
   }
 message.guild.members.cache.get(kullanıcı.id).roles.remove(kayıtsızROL)
+message.guild.members.cache.get(kullanıcı.id).roles.remove(fakeROL)
 message.guild.members.cache.get(kullanıcı.id).send(emb.setDescription(`• Kaydın ${message.author} tarafından yapıldı. \n • **Erkek** ve **Kayıtlı** rollerini aldın. \n • Kurallar kanalımızı okumayı unutma!`))
  
 message.react(basari)
@@ -74,7 +76,7 @@ let embed3 = new MessageEmbed()
 • <a:planta_siyahtac:789879331391799306> ${kullanıcı} <a:planta_siyahtac:789879331391799306> adlı kişinin kaydı başarıyla yapıldı.
 • İsim Yaş • **${isim} ${yaş}**
 • Verilen Roller • <@&${ayarlar.erkekROL}>
-• Alınan Roller • <@&${ayarlar.kayıtsızROL}>
+• Alınan Roller • <@&${ayarlar.kayıtsızROL}>, <@&${ayarlar.fakeROL}>
 
 `)
 message.channel.send(embed3).then(m => m.delete({timeout : '10000'}))
