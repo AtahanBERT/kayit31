@@ -19,13 +19,13 @@ const planta = new Discord.MessageEmbed()
 .setFooter('Planta Team Tarafından Yapılmıştır.')
 .setThumbnail(message.author.avatarURL({ dynamic: true, format: 'png', size: 1024 }))
 .setDescription(`
- > **\`${prefix}erkek @üye <isim> <yaş> -> .e @üye <isim> <yaş>\`**
- > **\`${prefix}kadın @üye <isim> <yaş> -> .k @üye <isim> <yaş>\`**
+ > **\`${prefix}erkek -> .e @üye <isim> <yaş>\`**
+ > **\`${prefix}kadın -> .k @üye <isim> <yaş>\`**
  > **\`${prefix}tag (tagımızı gösterir) \`**
  > **\`${prefix}ping (pingimi gösterir) \`**
  > **\`${prefix}toplam-komut -> .tkomut (toplam komutumu gösteir)\`**
  > **\`${prefix}yapımcım (yapımcımı gösterir)\`**
- > **\`${prefix}isimdeğiştir @üye <isim> -> .isim @üye <isim> \`** `)
+ > **\`${prefix}isimdeğiştir -> .isim @üye <isim> \`** `)
  message.channel.send(planta)
   
 }
