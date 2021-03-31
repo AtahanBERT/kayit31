@@ -113,7 +113,7 @@ client.elevation = message => {
 client.on("guildMemberAdd", member => {
   let tag = ayarlar.tag;
   //splashen
-  member.setNickname(ayarlar.kayitsizad);
+  member.setNickname(`${tag}| -İsim Yaş-`);
 });
 
 // İSİM YAŞ İSİM DEĞİŞTİRME SON
