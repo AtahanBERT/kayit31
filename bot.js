@@ -125,7 +125,7 @@ client.on("guildMemberAdd", member => {
 
 //BOT ROLÜ
 
-client.on(`guildMemberAdd`, async member => {//splashen
+client.on(`guildMemberAdd`, async member => {
   let botrol = ayarlar.botROL;
 if(!member.bot) return;
 member.roles.add(botrol)
@@ -145,11 +145,7 @@ member.roles.add(kayıtsızROL)
 })
 
 /// kayıtsız rolü son
-//splashen
 
-
-
-//splashen
 
 // BOT OTOROL
 
@@ -168,7 +164,7 @@ member.roles.add(botROL)
     const tarih = new Date().getTime() - user.createdAt.getTime();  
   const embed = new Discord.MessageEmbed()
   let rol = ayarlar.kayıtsızROL
- member.roles.add(rol)//splashen
+ member.roles.add(rol)
 
   var kontrol;
 if (tarih < 1296000000) kontrol = '<a:planta_carpi:813696920412618752> Bu Kullanıcı **Şüpheli**'
@@ -205,7 +201,7 @@ client.login(process.env.token);
 
 
 client.on("ready", async function() {
-const voiceChannel = "795970687188992052"
+let voiceChannel = ayarlar.botses;
 client.channels.cache.get(voiceChannel).join()
 .catch(err => {
 throw err;
