@@ -4,10 +4,11 @@ const Discord = require("discord.js");
 const ayarlar = require("../ayarlar.json");
 
 let prefix = ayarlar.prefix;
+let durum = ayarlar.durum;
 
 module.exports = client => {
   client.user.setStatus("online");
 
-client.user.setActivity(`ま PŁΛЛTΛ TΞΛM: discord.gg/Uy7aR74QdH`)
+client.user.setActivity(durum)
 };
 
