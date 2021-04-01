@@ -16,8 +16,7 @@ exports.run = async (client, message, args) => {
   
 if(message.channel.id !== kanal) return message.react(emoji);
 
-    if(!message.member.roles.cache.has(yetkili) & !message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(new MessageEmbed().setDescription(`${emoji} Bu işlemi sadece yetkililer yapabilir`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
-message.react(emoji);
+    if(!message.member.roles.cache.has(yetkili) & !message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(new MessageEmbed().setDescription(`${emoji} Bu işlemi sadece yetkililer yapabilir`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}));
   
 if(!args[0]) return message.channel.send(new MessageEmbed().setDescription(`${emoji} Bir kişiyi etiketlemelisin.`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
 
