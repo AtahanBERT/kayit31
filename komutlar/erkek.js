@@ -16,12 +16,13 @@ exports.run = async (client, message, args) => {
   
 if(message.channel.id !== kanal) return message.react(emoji);
 
-    if(!message.member.roles.cache.has(yetkili)) return message.channel.send(`${emoji} Bu işlemi sadece yetkililer yapabilir`)
+    if(!message.member.roles.cache.has(yetkili)) return message.channel.send(new MessageEmbed().setDescription(`${emoji} Bu işlemi sadece yetkililer yapabilir`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
 
-if(!args[0]) return message.channel.send(`${emoji} Bir kişiyi etiketlemelisin.`)
+  
+if(!args[0]) return message.channel.send(new MessageEmbed().setDescription(`${emoji} Bir kişiyi etiketlemelisin.`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
 
 let kullanıcı = message.mentions.users.first()
-if(!kullanıcı) return message.channel.send(`${emoji} ${args[0]}, kullanıcısını sunucuda bulamıyorum.`)
+if(!kullanıcı) return message.channel.send(new MessageEmbed().setDescription(`${emoji} ${args[0]}, kullanıcısını sunucuda bulamıyorum.`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
 if(kullanıcı.bot) return;
   
   
