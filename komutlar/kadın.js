@@ -16,30 +16,32 @@ exports.run = async (client, message, args) => {//splashen
   
 if(message.channel.id !== kanal) return message.react(emoji);
 
-    if(!message.member.roles.cache.has(yetkili)) return message.channel.send(`${emoji} Bu işlemi sadece yetkililer yapabilir`)
-
-if(!args[0]) return message.channel.send(`${emoji} Bir kişiyi etiketlemelisin.`)
+    if(!message.member.roles.cache.has(yetkili) & !message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(new MessageEmbed().setDescription(`${emoji} Bu işlemi sadece yetkililer yapabilir`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
+message.react(emoji);
   
+if(!args[0]) return message.channel.send(new MessageEmbed().setDescription(`${emoji} Bir kişiyi etiketlemelisin.`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
+
 let kullanıcı = message.mentions.users.first()
-if(!kullanıcı) return message.channel.send(`${emoji} ${args[0]}, kullanıcısını sunucuda bulamıyorum.`)
+if(!kullanıcı) return message.channel.send(new MessageEmbed().setDescription(`${emoji} ${args[0]}, kullanıcısını sunucuda bulamıyorum.`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
 if(kullanıcı.bot) return;
   
   
   
   const kurulus = new Date().getTime() - kullanıcı.createdAt.getTime();  
    var kontrol;
-if (kurulus < 1296000000) kontrol = '<a:no2:756946169883656193> Şüpheli'
-if (kurulus > 1296000000) kontrol = '<a:budur:740278066248548422> Güvenli'
+if (kurulus < 1296000000) kontrol = `${emoji} Şüpheli`
+if (kurulus > 1296000000) kontrol = `${basari} Güvenli`
   
   
   
 let isim = args[1]
 
-if(!isim) return message.channel.send(`${emoji} Üyenin ismini belirtmelisin.`)
+
+if(!isim) return message.channel.send(new MessageEmbed().setDescription(`${emoji} Üyenin ismini belirtmelisin.`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
 
 let yaş = args[2];
+if(!yaş) return message.channel.send(new MessageEmbed().setDescription(`${emoji} Üyenin yaşını belirtmelisin.`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
 
-if(!yaş) return message.channel.send(`${emoji} Üyenin yaşını belirtmelisin.`)  
 const emb = new MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL())
 .setThumbnail(client.user.avatarURL())
