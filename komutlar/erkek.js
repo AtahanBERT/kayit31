@@ -93,4 +93,4 @@ exports.conf = {
 
 exports.help = {
   name: 'erkek'
-}//splashen
+}

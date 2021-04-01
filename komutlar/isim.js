@@ -22,7 +22,7 @@ if(isim.length > 32) return message.reply(new Discord.MessageEmbed().setDescript
   
 message.guild.members.cache.get(kullanici.id).setNickname(`${tag} ${isim}`)
 message.channel.send(new Discord.MessageEmbed().setDescription(`${basari} Başarılı bir şekilde \`${kullanici.username}\` adlı kişinin kullanıcı adı \`${tag} ${isim}\` olarak değiştirildi.`).setAuthor(message.member.displayName, message.author.avatarURL({dynamic: true})).setColor('0x348f36').setTimestamp()).then(x => x.delete({timeout: 5000}))
-message.react('✅');
+message.react(basari);
 }
 
 exports.conf = {
