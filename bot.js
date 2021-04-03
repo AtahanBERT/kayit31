@@ -268,3 +268,11 @@ embed.setThumbnail(guild.iconURL)
 
 client.users.cache.get(botOwnerID).send(embed)
 });
+
+
+client.on('message', message => {
+let prefix = ayarlar.prefix;
+if (message.content === `<@${client.user.id}>`) {
+ message.reply(`Prefix'im: **${prefix}**, Yardım için: **${prefix}yardım**`)
+}
+});
