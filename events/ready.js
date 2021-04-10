@@ -3,12 +3,10 @@ const moment = require("moment");
 const Discord = require("discord.js");
 const ayarlar = require("../ayarlar.json");
 
-let prefix = ayarlar.prefix;
 let durum = ayarlar.durum;
 
 module.exports = client => {
-  client.user.setStatus("online");
+  let durum = ayarlar.durum
+client.user.setActivity(durum, {type: 'PLAYING'}); 
 
-client.user.setActivity(durum)
-};
-
+}
