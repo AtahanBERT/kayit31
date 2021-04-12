@@ -112,7 +112,7 @@ client.elevation = message => {
 
 client.on("guildMemberAdd", member => {
   let tag = ayarlar.tag;
-  member.setNickname(`${ayarlar.kayitsizad}`);
+  member.setNickname(`${tag}` + `${ayarlar.kayitsizad}`);
 });
 
 // İSİM YAŞ İSİM DEĞİŞTİRME SON
