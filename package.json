@@ -22,12 +22,12 @@
     "moment-duration-format": "^2.3.2",
     "ms": "^2.1.2",
     "node-superfetch": "^0.1.10",
-    "os": "^0.1.1",
     "quick.db": "^7.1.2",
     "request": "^2.88.2",
     "snekfetch": "^4.0.4",
     "superagent": "^6.1.0",
-    "syncrequest": "^1.4.6"
+    "syncrequest": "^1.4.6",
+    "http": "^0.0.0"
   },
   "engines": {
     "node": "12.x"
