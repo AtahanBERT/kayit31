@@ -188,7 +188,7 @@ if (tarih > 1296000000) kontrol = '<a:plantatikm:789863491728965662> Bu Kullanı
  » • <a:planta_siyahtac:789879331391799306> Ses teyit odasında kaydınızı yaptırabilirsiniz. 
 
 `)
-    .setImage('https://images-ext-1.discordapp.net/external/yoSLEap2ultvrLEJrx0bL5aP09iqkykY-C86kYCvVVw/https/media.discordapp.net/attachments/786556264809103391/830900165467701278/standard_2.gif')
+    .setImage('https://media.discordapp.net/attachments/805530526076239882/824704620407816202/image0.gif')
     .setTimestamp()
     
       client.channels.cache.find(x => x.id === kanal).send(`<@&${ayarlar.yetkiliROL}>`)
