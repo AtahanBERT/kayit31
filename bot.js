@@ -113,7 +113,7 @@ client.elevation = message => {
 client.on("guildMemberAdd", member => {
   let tag = ayarlar.tag;
   //splashen
-  member.setNickname(ayarlar.kayitsizad);
+  member.setNickname(`${tag}` + `${ayarlar.kayitsizad}`);
 });
 
 // İSİM YAŞ İSİM DEĞİŞTİRME SON
@@ -188,7 +188,7 @@ if (tarih > 1296000000) kontrol = '<a:plantatikm:789863491728965662> Bu Kullanı
  » • <a:planta_siyahtac:789879331391799306> Ses teyit odasında kaydınızı yaptırabilirsiniz. 
 
 `)
-    .setImage('https://media.discordapp.net/attachments/805530526076239882/824704620407816202/image0.gif')
+    .setImage('')
     .setTimestamp()
     
       client.channels.cache.find(x => x.id === kanal).send(`<@&${ayarlar.yetkiliROL}>`)
