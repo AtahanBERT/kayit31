@@ -112,7 +112,6 @@ client.elevation = message => {
 
 client.on("guildMemberAdd", member => {
   let tag = ayarlar.tag;
-  //splashen
   member.setNickname(`${tag}` + `${ayarlar.kayitsizad}`);
 });
 
