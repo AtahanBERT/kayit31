@@ -16,7 +16,7 @@ exports.run = async(client, message, args) => {
 
 
 const planta = new Discord.MessageEmbed()
-.setFooter('Extacy Community Tarafından Yapılmıştır.')
+.setFooter('Planta Team Tarafından Yapılmıştır.')
 .setThumbnail(message.author.avatarURL({ dynamic: true, format: 'png', size: 1024 }))
 .setDescription(`
  > **\`${prefix}erkek -> .e @üye <isim> <yaş>\`**
