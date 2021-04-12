@@ -112,6 +112,7 @@ client.elevation = message => {
 
 client.on("guildMemberAdd", member => {
   let tag = ayarlar.tag;
+  //splashen
   member.setNickname(`${tag}` + `${ayarlar.kayitsizad}`);
 });
 
@@ -163,7 +164,6 @@ member.roles.add(botROL)
     const tarih = new Date().getTime() - user.createdAt.getTime();  
   const embed = new Discord.MessageEmbed()
   let rol = ayarlar.kayıtsızROL
-  let gif = ayarlar.mesajgif
  member.roles.add(rol)
 
   var kontrol;
@@ -188,7 +188,7 @@ if (tarih > 1296000000) kontrol = '<a:plantatikm:789863491728965662> Bu Kullanı
  » • <a:planta_siyahtac:789879331391799306> Ses teyit odasında kaydınızı yaptırabilirsiniz. 
 
 `)
-    .setImage(gif)
+    .setImage('')
     .setTimestamp()
     
       client.channels.cache.find(x => x.id === kanal).send(`<@&${ayarlar.yetkiliROL}>`)
