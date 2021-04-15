@@ -34,8 +34,6 @@ if (kurulus > 1296000000) kontrol = `${basari} Güvenli`
   
   
 let isim = args[1]
-
-
 if(!isim) return message.channel.send(new MessageEmbed().setDescription(`${emoji} Üyenin ismini belirtmelisin.`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
 
 let yaş = args[2];
