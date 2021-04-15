@@ -66,7 +66,7 @@ let embed2 = new MessageEmbed()
 
 
 
-client.channels.cache.get(ayarlar.kayıtLOG).send(embed2)
+client.channels.cache.get(ayarlar.kayıtLOG).send(embed2);
 let embed3 = new MessageEmbed()
 .setColor('WHITE')
 
@@ -77,7 +77,7 @@ let embed3 = new MessageEmbed()
 • Alınan Roller • <@&${ayarlar.kayıtsızROL}>, <@&${ayarlar.fakeROL}>
 
 `)
-message.channel.send(embed3).then(m => m.delete({timeout : '10000'}))
+message.channel.send(embed3)
 
 
 }
