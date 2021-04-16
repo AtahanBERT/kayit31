@@ -166,25 +166,25 @@ member.roles.add(botROL)
  member.roles.add(rol)
 
   var kontrol;
-if (tarih < 1296000000) kontrol = '<a:planta_carpi:813696920412618752> Bu Kullanıcı **Şüpheli**'
-if (tarih > 1296000000) kontrol = '<a:plantatikm:789863491728965662> Bu Kullanıcı **Güvenli**'
+if (tarih < 1296000000) kontrol = '<a:extacy_carp2:832662920491302993> Bu Kullanıcı **Şüpheli**'
+if (tarih > 1296000000) kontrol = '<a:extacy_tik2:832661825840742411> Bu Kullanıcı **Güvenli**'
   moment.locale("tr");
   let kanal1 = client.channels.cache.find(x => x.id === kanal);
     let giris = new Discord.MessageEmbed()
     .setDescription(`
- » • <a:planta_siyahtac:789879331391799306> Hoşgeldin ${member}
+ » • <a:extacy_siyahtac:832658958531297300> Hoşgeldin ${member}
     
- » • <a:planta_siyahtac:789879331391799306> Seninle birlikte **${member.guild.memberCount}** kişiyiz.
+ » • <a:extacy_siyahtac:832658958531297300> Seninle birlikte **${member.guild.memberCount}** kişiyiz.
  
  » • [ **${ayarlar.tag}** ] Tagımızı alarak ekibimize katılabilirsin.
  
- » • <a:planta_siyahtac:789879331391799306> <@&${ayarlar.yetkiliROL}> rolündekiler seninle ilgilenecektir.
+ » • <a:extacy_siyahtac:832658958531297300> <@&${ayarlar.yetkiliROL}> rolündekiler seninle ilgilenecektir.
  
  » •  ${kontrol} 
  
- » • <a:planta_siyahtac:789879331391799306> Hesabın Oluşturulma Tarihi: \n • \` ${moment(member.user.createdAt).format("YYYY DD MMMM dddd (hh:mm:ss)")} \`
+ » • <a:extacy_siyahtac:832658958531297300> Hesabın Oluşturulma Tarihi: \n • \` ${moment(member.user.createdAt).format("YYYY DD MMMM dddd (hh:mm:ss)")} \`
  
- » • <a:planta_siyahtac:789879331391799306> Ses teyit odasında kaydınızı yaptırabilirsiniz. 
+ » • <a:extacy_siyahtac:832658958531297300> Ses teyit odasında kaydınızı yaptırabilirsiniz. 
 
 `)
     .setImage(ayarlar.mesajgif)
