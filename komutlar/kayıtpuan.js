@@ -14,7 +14,7 @@ if(!message.member.roles.cache.has(ayarlar.yetkiliROL) & !message.member.hasPerm
   let kadınpuanlar = db.fetch(`kayıt.puan.kadın.${üye.id}`)
   let total = kadınpuanlar + erkekpuanlar
   let lecrain = new MessageEmbed()
-  .setAuthor(`Kayıt Puan | Kişi : ${üye}`)
+  .setAuthor(`Kayıt Puan | Kişi : ${üye.username}`)
   .setColor('BLACK')
   .setDescription(`
 <a:mega:828241745862066206> Toplam Kadın Kayıtı Puanın : **${kadınpuanlar ? kadınpuanlar : 'Hiç Kadın Birini Kayıt Etmedin'}** 
@@ -25,7 +25,7 @@ if(!message.member.roles.cache.has(ayarlar.yetkiliROL) & !message.member.hasPerm
   `)
   .setFooter(`Komutu kullanan yetkili : ${message.author.username}`) 
         .setThumbnail(member.user.avatarURL())
-  message.react('')
+  message.react('✅')
   return message.channel.send(lecrain)
 };
 

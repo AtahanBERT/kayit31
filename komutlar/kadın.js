@@ -51,7 +51,7 @@ let tag = ayarlar.tag || ''
 message.guild.members.cache.get(kullanıcı.id).setNickname(`${tag} ${isim} ${yaş}`)
 message.guild.members.cache.get(kullanıcı.id).roles.add(kadınROL)
 message.guild.members.cache.get(kullanıcı.id).roles.add(kayıtlıROL)
-db.add(`kayıt.puan.kadın.${message.author.id}`, +1)
+db.add(`kayıtsayı_${message.author.id}`, +1)
   if(ayarlar.kadınICON) {
     let kadınICON = ayarlar.kadınICON
       message.guild.members.cache.get(kullanıcı.id).roles.add(kadınICON)

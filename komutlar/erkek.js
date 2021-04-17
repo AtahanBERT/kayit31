@@ -12,6 +12,7 @@ exports.run = async (client, message, args) => {
     let kayıtlıROL = ayarlar.kayıtlıROL
     let yetkili = ayarlar.yetkiliROL
     let kayıtLOG = ayarlar.kayıtLOG
+    let kayıtsayı = db.fetch(`kayıtsayı_${message.author.id}`)
     let kanal = ayarlar.giriskanal;
   
 if(message.channel.id !== kanal) return message.react(emoji);
@@ -49,7 +50,7 @@ let tag = ayarlar.tag || ''
 message.guild.members.cache.get(kullanıcı.id).setNickname(`${tag} ${isim} ${yaş}`)
 message.guild.members.cache.get(kullanıcı.id).roles.add(erkekROL)
 message.guild.members.cache.get(kullanıcı.id).roles.add(kayıtlıROL)
-db.add(`kayıt.puan.erkek.${message.author.id}`, +1)
+db.add(`kayıtsayı_${message.author.id}`, +1)
   if(ayarlar.erkekICON) {
     let erkekICON = ayarlar.erkekICON
       message.guild.members.cache.get(kullanıcı.id).roles.add(erkekICON)
@@ -75,9 +76,9 @@ let embed3 = new MessageEmbed()
 • ${kullanıcı} adlı kişinin kaydı başarıyla yapıldı.
 • İsim Yaş • **${isim} ${yaş}**
 • Verilen Roller • <@&${ayarlar.erkekROL}>
-• Alınan Roller • <@&${ayarlar.kayıtsızROL}>, <@&${ayarlar.fakeROL}>
+• Alınan Roller • <@&${ayarlar.kayıtsızROL}>, <@&${ayarlar.fakeROL}>`)
+.setFooter(`Toplam Kayıt Sayın: ${kayıtsayı ? `${kayıtsayı}` : "0"}`, message.author.avatarURL({ dynamic: true, format: 'png', size: 1024 }))
 
-`)
 message.channel.send(embed3)
 
 
