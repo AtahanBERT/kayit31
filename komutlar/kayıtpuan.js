@@ -1,11 +1,8 @@
 const Discord = require('discord.js');
 const db = require("quick.db")
 let ayarlar = require('../ayarlar.json')
-exports.off = async (client, message, args) => {
-     
-  if(db.fetch(`bakim`)) {
-  if(message.author.id !== "") {return message.channel.send('Şuanda Bakım Modu Açıktır.')}
-}
+exports.run = async (client, message, args) => {
+let prefix = ayarlar.prefix    
     
   if(!message.member.roles.cache.has(ayarlar.yetkiliROL)) return message.channel.send(`Bu komutu kullanabilmek için yeterli yetkiye sahip olmasın.`)
 
@@ -33,11 +30,14 @@ exports.off = async (client, message, args) => {
 };
 
 exports.conf = {
-  name: "kayıtpuan",
-  guildOnly: true,
-  aliases: ["stats","stat","kaçkişiyikayıtettim"],
-}
+  enabled: true,
+  guildOnly: false,
+  permlevel: 0,
+  aliases: ["stats","stat","kaçkişiyikayıtettim","kayıtpuan"],
+};
   
 exports.help = {
-  name: 'kayıtpuan'
+  name: 'kayıtpuan',
+  description: 'kayıt',
+  usage: 'kayıtpuan @üye'
 }
