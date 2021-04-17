@@ -52,6 +52,7 @@ message.guild.members.cache.get(kullanıcı.id).setNickname(`${tag} ${isim} ${ya
 message.guild.members.cache.get(kullanıcı.id).roles.add(erkekROL)
 message.guild.members.cache.get(kullanıcı.id).roles.add(kayıtlıROL)
 db.add(`erkek.sayı_${message.author.id}`, +1)
+db.add(`toplam.sayı_${message.author.id}`, +1)
   if(ayarlar.erkekICON) {
     let erkekICON = ayarlar.erkekICON
       message.guild.members.cache.get(kullanıcı.id).roles.add(erkekICON)
@@ -78,7 +79,7 @@ let embed3 = new MessageEmbed()
 • İsim Yaş • **${isim} ${yaş}**
 • Verilen Roller • <@&${ayarlar.erkekROL}>
 • Alınan Roller • <@&${ayarlar.kayıtsızROL}>, <@&${ayarlar.fakeROL}>`)
-.setFooter(((`Toplam Erkek Kayıt Sayın: ${kayıtsayı ? `${kayıtsayı}` : "0"}) + (`Toplam Kayıt Sayın: ${tkayıtsayı ? `${tkayıtsayı}` : "0"}`), message.author.avatarURL({ dynamic: true, format: 'png', size: 1024 }))
+.setFooter((`Toplam Erkek Kayıt Sayın: ${kayıtsayı ? `${kayıtsayı}` : "0"}`) + (`\nToplam Kayıt Sayın: ${tkayıtsayı ? `${tkayıtsayı}` : "0"}`), message.author.avatarURL({ dynamic: true, format: 'png', size: 1024 }))
 
 message.channel.send(embed3)
 

@@ -13,6 +13,7 @@ exports.run = async (client, message, args) => {
     let yetkili = ayarlar.yetkiliROL
     let kayıtLOG = ayarlar.kayıtLOG
     let kayıtsayı = db.fetch(`kadın.sayı_${message.author.id}`)
+    let tkayıtsayı = db.fetch(`toplam.sayı_${message.author.id}`)
     let kanal = ayarlar.giriskanal;
   
 if(message.channel.id !== kanal) return message.react(emoji);
@@ -53,6 +54,7 @@ message.guild.members.cache.get(kullanıcı.id).setNickname(`${tag} ${isim} ${ya
 message.guild.members.cache.get(kullanıcı.id).roles.add(kadınROL)
 message.guild.members.cache.get(kullanıcı.id).roles.add(kayıtlıROL)
 db.add(`kadın.sayı_${message.author.id}`, +1)
+db.add(`toplam.sayı_${message.author.id}`, +1)
   if(ayarlar.kadınICON) {
     let kadınICON = ayarlar.kadınICON
       message.guild.members.cache.get(kullanıcı.id).roles.add(kadınICON)
@@ -80,7 +82,7 @@ let embed3 = new MessageEmbed()
 • Verilen Roller • <@&${ayarlar.kadınROL}>
 • Alınan Roller • <@&${ayarlar.kayıtsızROL}>, <@&${ayarlar.fakeROL}>
 `)
-.setFooter(`Toplam Kadın Kayıt Sayın: ${kayıtsayı ? `${kayıtsayı}` : "0"}`, message.author.avatarURL({ dynamic: true, format: 'png', size: 1024 }))
+.setFooter((`Toplam Kadın Kayıt Sayın: ${kayıtsayı ? `${kayıtsayı}` : "0"}`) + (`\nToplam Kayıt Sayın: ${tkayıtsayı ? `${tkayıtsayı}` : "0"}`), message.author.avatarURL({ dynamic: true, format: 'png', size: 1024 }))
 message.channel.send(embed3)
 
 

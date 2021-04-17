@@ -14,14 +14,14 @@ if(!message.member.roles.cache.has(ayarlar.yetkiliROL) & !message.member.hasPerm
   let kadınpuanlar = db.fetch(`kadın.sayı_${üye.id}`)
   let total = kadınpuanlar + erkekpuanlar
   let lecrain = new MessageEmbed()
-  .setAuthor(`Kayıt Puan | Kişi : ${üye.username}`)
+  .setAuthor(`Kayıt Sayı | Kişi : ${üye.username}`)
   .setColor('BLACK')
   .setDescription(`
 <a:mega:828241745862066206> Toplam Kadın Kayıtı Puanın : **${kadınpuanlar ? kadınpuanlar : 'Hiç Kadın Birini Kayıt Etmedin'}** 
 
 <a:mega:828241745862066206> Toplam Erkek Kayıtı Puanın : **${erkekpuanlar ? erkekpuanlar : 'Hiç Erkek Birini Kayıt Etmedin'}** 
 
-<a:mega:828241745862066206> Tüm Puan Toplamları : **${total ? total : 'Kayıt Puanın Yok'}**
+<a:mega:828241745862066206> Tüm Puan Toplamları : **${total ? total : 'Kayıt Sayın Yok'}**
   `)
   .setFooter(`Komutu kullanan yetkili : ${message.author.username}`) 
         .setThumbnail(member.user.avatarURL())
@@ -32,10 +32,10 @@ if(!message.member.roles.cache.has(ayarlar.yetkiliROL) & !message.member.hasPerm
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['stat','istatistik'],
+  aliases: ['stat','istatistik','kayıtsayı','kayitsayi','kayıtpuan','stats'],
   permLevel: 0
 };
 
 exports.help = {
-  name: 'kayıt'
+  name: 'kayıtsayı'
 }
