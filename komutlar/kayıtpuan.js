@@ -1,9 +1,10 @@
-const Discord = require('discord.js');
+const { Discord, MessageEmbed } = require('discord.js');
 const db = require("quick.db")
 let ayarlar = require('../ayarlar.json')
+let emoji = ayarlar.basarisizemoji;
 exports.run = async (client, message, args) => {
     
-  if(!message.member.roles.cache.has(ayarlar.yetkiliROL)) return message.channel.send(`Bu komutu kullanabilmek için yeterli yetkiye sahip olmasın.`)
+if(!message.member.roles.cache.has(ayarlar.yetkiliROL) & !message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(new MessageEmbed().setDescription(`${emoji} Bu işlemi sadece yetkililer yapabilir`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
 
   let üye = message.mentions.users.first() || message.author
   if (!üye) return message.channel.send('Üye Etiketler misin ?')
