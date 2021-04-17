@@ -21,6 +21,7 @@ const planta = new Discord.MessageEmbed()
 .setDescription(`
  > **\`${prefix}erkek -> .e @üye <isim> <yaş>\`**
  > **\`${prefix}kadın -> .k @üye <isim> <yaş>\`**
+ > **\`${prefix}kayıtsayı -> .stat @üye\`**
  > **\`${prefix}tag (tagımızı gösterir) \`**
  > **\`${prefix}ping (pingimi gösterir) \`**
  > **\`${prefix}toplam-komut -> .tkomut (toplam komutumu gösteir)\`**

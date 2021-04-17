@@ -2,6 +2,7 @@ const { Discord, MessageEmbed } = require('discord.js');
 const db = require('quick.db')
 let ayarlar = require('../ayarlar.json')
 let emoji = ayarlar.basarisizemoji;
+let basari = ayarlar.basariliemoji;
 exports.run = async (client, message, args) => {
     
 if(!message.member.roles.cache.has(ayarlar.yetkiliROL) & !message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(new MessageEmbed().setDescription(`${emoji} Bu işlemi sadece yetkililer yapabilir`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
@@ -17,15 +18,15 @@ if(!message.member.roles.cache.has(ayarlar.yetkiliROL) & !message.member.hasPerm
   .setAuthor(`Kayıt Sayı | Kişi : ${üye.username}`)
   .setColor('BLACK')
   .setDescription(`
-<a:mega:828241745862066206> Toplam Kadın Kayıtı Puanın : **${kadınpuanlar ? kadınpuanlar : 'Hiç Kadın Birini Kayıt Etmedin'}** 
+<a:mega:828241745862066206> Toplam Kadın Kayıtı Sayın : **${kadınpuanlar ? kadınpuanlar : 'Hiç Kadın Birini Kayıt Etmedin'}** 
 
-<a:mega:828241745862066206> Toplam Erkek Kayıtı Puanın : **${erkekpuanlar ? erkekpuanlar : 'Hiç Erkek Birini Kayıt Etmedin'}** 
+<a:mega:828241745862066206> Toplam Erkek Kayıtı Sayın : **${erkekpuanlar ? erkekpuanlar : 'Hiç Erkek Birini Kayıt Etmedin'}** 
 
-<a:mega:828241745862066206> Tüm Puan Toplamları : **${total ? total : 'Kayıt Sayın Yok'}**
+<a:mega:828241745862066206> Tüm Sayı Toplamları : **${total ? total : 'Kayıt Sayın Yok'}**
   `)
   .setFooter(`Komutu kullanan yetkili : ${message.author.username}`) 
         .setThumbnail(member.user.avatarURL())
-  message.react('✅')
+  message.react(basari)
   return message.channel.send(lecrain)
 };
 
