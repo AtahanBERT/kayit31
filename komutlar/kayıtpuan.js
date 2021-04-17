@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
 if(!message.member.roles.cache.has(ayarlar.yetkiliROL) & !message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(new MessageEmbed().setDescription(`${emoji} Bu işlemi sadece yetkililer yapabilir`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
 
   let üye = message.mentions.users.first() || message.author
-  if (!üye) return message.channel.send('Üye Etiketler misin ?')
+  if (!üye) return message.channel.send(`${emoji} Üye Etiketler misin ?`)
   let rol = message.mentions.roles.first()
   let member = message.guild.member(üye)
   let erkekpuanlar = db.fetch(`erkek.sayı_${üye.id}`)
@@ -32,7 +32,7 @@ if(!message.member.roles.cache.has(ayarlar.yetkiliROL) & !message.member.hasPerm
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['stat'],
+  aliases: ['stat','istatistik'],
   permLevel: 0
 };
 

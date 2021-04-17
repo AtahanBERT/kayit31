@@ -13,6 +13,7 @@ exports.run = async (client, message, args) => {
     let yetkili = ayarlar.yetkiliROL
     let kayıtLOG = ayarlar.kayıtLOG
     let kayıtsayı = db.fetch(`erkek.sayı_${message.author.id}`)
+    let tkayıtsayı = db.fetch(`toplam.sayı_${message.author.id}`)
     let kanal = ayarlar.giriskanal;
   
 if(message.channel.id !== kanal) return message.react(emoji);
@@ -77,7 +78,7 @@ let embed3 = new MessageEmbed()
 • İsim Yaş • **${isim} ${yaş}**
 • Verilen Roller • <@&${ayarlar.erkekROL}>
 • Alınan Roller • <@&${ayarlar.kayıtsızROL}>, <@&${ayarlar.fakeROL}>`)
-.setFooter(`Toplam Erkek Kayıt Sayın: ${kayıtsayı ? `${kayıtsayı}` : "0"}`, message.author.avatarURL({ dynamic: true, format: 'png', size: 1024 }))
+.setFooter(((`Toplam Erkek Kayıt Sayın: ${kayıtsayı ? `${kayıtsayı}` : "0"}) + (`Toplam Kayıt Sayın: ${tkayıtsayı ? `${tkayıtsayı}` : "0"}`), message.author.avatarURL({ dynamic: true, format: 'png', size: 1024 }))
 
 message.channel.send(embed3)
 
