@@ -10,8 +10,8 @@ if(!message.member.roles.cache.has(ayarlar.yetkiliROL) & !message.member.hasPerm
   if (!üye) return message.channel.send('Üye Etiketler misin ?')
   let rol = message.mentions.roles.first()
   let member = message.guild.member(üye)
-  let erkekpuanlar = db.fetch(`kayıt.puan.erkek.${üye.id}`)
-  let kadınpuanlar = db.fetch(`kayıt.puan.kadın.${üye.id}`)
+  let erkekpuanlar = db.fetch(`erkek.sayı_${üye.id}`)
+  let kadınpuanlar = db.fetch(`kadın.sayı_${üye.id}`)
   let total = kadınpuanlar + erkekpuanlar
   let lecrain = new MessageEmbed()
   .setAuthor(`Kayıt Puan | Kişi : ${üye.username}`)
@@ -19,7 +19,7 @@ if(!message.member.roles.cache.has(ayarlar.yetkiliROL) & !message.member.hasPerm
   .setDescription(`
 <a:mega:828241745862066206> Toplam Kadın Kayıtı Puanın : **${kadınpuanlar ? kadınpuanlar : 'Hiç Kadın Birini Kayıt Etmedin'}** 
 
-<a:mega:828241745862066206> Toplam Erkek Kayıtı Puanın : **${erkekpuanlar ? erkekpuanlar : 'Hiç Kadın Birini Erkek Etmedin'}** 
+<a:mega:828241745862066206> Toplam Erkek Kayıtı Puanın : **${erkekpuanlar ? erkekpuanlar : 'Hiç Erkek Birini Kayıt Etmedin'}** 
 
 <a:mega:828241745862066206> Tüm Puan Toplamları : **${total ? total : 'Kayıt Puanın Yok'}**
   `)
@@ -32,10 +32,10 @@ if(!message.member.roles.cache.has(ayarlar.yetkiliROL) & !message.member.hasPerm
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['kayıt','stat'],
+  aliases: ['stat'],
   permLevel: 0
 };
 
 exports.help = {
-  name: 'kadın'
+  name: 'kayıt'
 }
