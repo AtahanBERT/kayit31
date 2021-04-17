@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const db = require("quick.db")
 let ayarlar = require('../ayarlar.json')
 exports.run = async (client, message, args) => {
-let prefix = ayarlar.prefix    
     
   if(!message.member.roles.cache.has(ayarlar.yetkiliROL)) return message.channel.send(`Bu komutu kullanabilmek için yeterli yetkiye sahip olmasın.`)
 
@@ -30,7 +29,7 @@ let prefix = ayarlar.prefix
 };
 
 exports.conf = {
-  enabled: true,
+  enabled: false,
   guildOnly: false,
   permlevel: 0,
   aliases: ["stats","stat","kaçkişiyikayıtettim","kayıtpuan"],
