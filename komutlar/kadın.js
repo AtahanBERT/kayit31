@@ -22,7 +22,7 @@ if(message.channel.id !== kanal) return message.react(emoji);
 
 if(!args[0]) return message.channel.send(new MessageEmbed().setDescription(`${emoji} Bir kişiyi etiketlemelisin.`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
 
-let kullanıcı = message.mentions.users.first() || message.guild.members.cache.get(args[0]);
+let kullanıcı = message.mentions.users.first()
 if(!kullanıcı) return message.channel.send(new MessageEmbed().setDescription(`${emoji} ${args[0]}, kullanıcısını sunucuda bulamıyorum.`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
 if(kullanıcı.bot) return;
   
@@ -50,9 +50,9 @@ const emb = new MessageEmbed()
 .setFooter('Kayıt Saati')
 .setColor(`#fffff0`)
 let tag = ayarlar.tag || ''
-message.guild.members.cache.get(kullanıcı).setNickname(`${tag} ${isim} ${yaş}`)
-message.guild.members.cache.get(kullanıcı).roles.add(kadınROL)
-message.guild.members.cache.get(kullanıcı).roles.add(kayıtlıROL)
+message.guild.members.cache.get(kullanıcı.id).setNickname(`${tag} ${isim} ${yaş}`)
+message.guild.members.cache.get(kullanıcı.id).roles.add(kadınROL)
+message.guild.members.cache.get(kullanıcı.id).roles.add(kayıtlıROL)
 db.add(`kadın.sayı_${message.author.id}`, +1)
 db.add(`toplam.sayı_${message.author.id}`, +1)
   if(ayarlar.kadınICON) {
