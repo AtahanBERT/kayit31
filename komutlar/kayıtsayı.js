@@ -25,7 +25,7 @@ if(!message.member.roles.cache.has(ayarlar.yetkiliROL) & !message.member.hasPerm
 <a:mega:828241745862066206> Tüm Sayı Toplamları : **${total ? total : 'Kayıt Sayın Yok'}**
   `)
   .setFooter(`Komutu kullanan yetkili : ${message.author.username}`, message.guild.iconURL({ dynamic: true, format: 'png', size: 1024 })) 
-        .setThumbnail(member.user.avatarURL())
+        .setThumbnail(member.user.avatarURL({dynamic: true}))
   message.react(basari)
   return message.channel.send(lecrain)
 };
