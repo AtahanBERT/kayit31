@@ -22,7 +22,7 @@ if(message.channel.id !== kanal) return message.react(emoji);
 
 if(!args[0]) return message.channel.send(new MessageEmbed().setDescription(`${emoji} Bir kişiyi etiketlemelisin.`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
 
-let kullanıcı = message.mentions.users.first()
+let kullanıcı = message.mentions.users.first() || message.guild.members.cache.get(args[0]);
 if(!kullanıcı) return message.channel.send(new MessageEmbed().setDescription(`${emoji} ${args[0]}, kullanıcısını sunucuda bulamıyorum.`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
 if(kullanıcı.bot) return;
   
