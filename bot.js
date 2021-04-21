@@ -11,6 +11,7 @@ const app = express();
 const http = require("http");
 var Jimp = require('jimp');
 app.get("/", (request, response) => {
+  response.send(`Bot Aktif | Discord: https://discord.gg/yF6RRnq9Ks | İletisim Veya Uptime Etmek İçin Discordumuza Gelebilirsiniz.`)
   response.sendStatus(200);
 });
 app.listen(process.env.PORT);
