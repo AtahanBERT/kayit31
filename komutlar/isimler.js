@@ -32,13 +32,14 @@ const embed = new MessageEmbed()
     ${isimler}`)
     .setColor("AQUA")
 message.channel.send(embed)
+message.react(basari)
 }
 
 
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['isimler', 'eski-isim'],
+  aliases: ['isimler','eski-isim'],
   permLevel: 0,
 }
 
