@@ -82,7 +82,7 @@ let embed3 = new MessageEmbed()
 .setFooter((`Toplam Erkek Kayıt Sayın: ${kayıtsayı ? `${kayıtsayı}` : "0"}`) + (`\nToplam Kayıt Sayın: ${tkayıtsayı ? `${tkayıtsayı}` : "0"}`), message.author.avatarURL({ dynamic: true, format: 'png', size: 1024 }))
 
 message.channel.send(embed3)
-datab.push(`isim.${message.guild.id}`, {userID: member.id, isim: name,  role: erkekROL.id})}
+db.push(`isim.${message.guild.id}`, {userID: kullanıcı.id, isim: isim, yas: yaş, role: ayarlar.erkekROL})}
 exports.conf = {
   enabled: true,
   guildOnly: false,
