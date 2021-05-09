@@ -4,7 +4,7 @@ let basarisiz = ayarlar.basarisizemoji;
 
 exports.run = (client, message, args) => {
   let mesaj = args.slice(0).join(' ');
-if (mesaj.length < 1) return message.reply(`${basarisiz} Yazmam için herhangi bir şey yazmalısın.`);
+if (mesaj.length < 1) return message.reply(`${basarisiz} ${message.author}, Yazmam için herhangi bir şey yazmalısın.`);
   message.delete();
   message.channel.send(mesaj);
 };

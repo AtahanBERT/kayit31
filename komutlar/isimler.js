@@ -8,7 +8,7 @@ let tag = ayarlar.tag;
 module.exports.run = async (client, message, users, args) => {
   
 if(!message.member.roles.cache.has(yetkili) & !message.member.hasPermission("ADMINISTRATOR"))
-return message.channel.send(new MessageEmbed().setDescription(`${emoji} Bu işlemi sadece yetkililer yapabilir`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))  
+return message.channel.send(new MessageEmbed().setDescription(`${emoji} ${message.author}, Bu işlemi sadece yetkililer yapabilir`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))  
   
 let user = message.guild.member(message.mentions.members.first() || message.guild.members.cache.get(args[0]));
 let isim = message.mentions.members.first() || message.guild.members.get(args[0]);//Useri tanımladık
