@@ -26,7 +26,7 @@ return message.channel.send(new MessageEmbed().setDescription(`${emoji} ${messag
 <a:mega:828241745862066206> Tüm Sayı Toplamları : **${total ? total : 'Kayıt Sayın Yok'}**
   `)
   .setFooter(`Komutu kullanan yetkili : ${message.author.username}`, message.guild.iconURL({ dynamic: true, format: 'png', size: 1024 })) 
-        .setThumbnail(member.user.avatarURL({dynamic: true}))
+  .setThumbnail(member.user.avatarURL({dynamic: true}))
   message.react(basari)
   return message.channel.send(lecrain)
 };
