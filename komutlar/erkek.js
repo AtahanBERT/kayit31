@@ -66,16 +66,22 @@ message.react(basari)
 let mesaj31 = `> ${kullanıcı} Aramıza Katıldı.`
 let embed2 = new MessageEmbed()
 .setDescription(`
-• ${kullanıcı} Aramıza <@&${erkekROL}> Rolleriyle katıldı.\n
+• ${kullanıcı} Aramıza <@&${erkekROL}> Rolleriyle katıldı.
+
 • Kaydı Gerçekleştiren Yetkili
-> ${message.author}\n
+> ${message.author}
+
 • Aramıza Hoş Geldin
 > ${kullanıcı}
 `)
+.setColor('BLACK')
+.setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true }))
+.setFooter(message.guild.displayName, message.guild.iconURL)
 
 
 
-client.channels.cache.get(ayarlar.kayıtLOG).send(embed2) + (mesaj31);
+client.channels.cache.get(ayarlar.kayıtLOG).send(embed2)
+client.channels.cache.get(ayarlar.kayıtLOG).send(mesaj31);
 let embed3 = new MessageEmbed()
 .setColor('WHITE')
 
