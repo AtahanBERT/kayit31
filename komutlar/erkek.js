@@ -65,8 +65,10 @@ message.guild.members.cache.get(kullanıcı.id).send(emb.setDescription(`• Kay
 message.react(basari)
 let embed2 = new MessageEmbed()
 .setDescription(`
+> ${}Aramıza Katıldı.
 • ${kullanıcı} adlı kullanıcı **${isim} ${yaş}** olarak sunucumuza kayıt oldu. 
-• Kaydını yapan kişi : ${message.author}
+• Kaydını yapan kişi :
+${message.author}
 `)
 
 
