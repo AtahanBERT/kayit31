@@ -65,14 +65,33 @@ message.guild.members.cache.get(kullanıcı.id).roles.remove(fakeROL)
 message.guild.members.cache.get(kullanıcı.id).send(emb.setDescription(`• Kaydın ${message.author} tarafından yapıldı. \n • **Kadın** ve **Kayıtlı** rollerini aldın. \n • Kurallar kanalımızı okumayı unutma!`))
  
 message.react(basari)
+let mesaj31 = `> ${kullanıcı} Aramıza Katıldı.`
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if (new Date().getTime() - start > milliseconds) {
+      break;
+    }
+  }
+}
 let embed2 = new MessageEmbed()
 .setDescription(`
-• ${kullanıcı} adlı kullanıcı **${isim} ${yaş}** olarak sunucumuza kayıt oldu. 
-• Kaydını yapan kişi : ${message.author}
+• ${kullanıcı} Aramıza <@&${kadınROL}> Rolleriyle katıldı.
+
+• Kaydı Gerçekleştiren Yetkili
+> ${message.author}
+
+• Aramıza Hoş Geldin
+> ${kullanıcı}
 `)
+.setColor('BLACK')
+.setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true }))
+.setFooter(message.guild.name, message.guild.iconURL({dynamic: true}))
+.setTimestamp()
 
 
-
+client.channels.cache.get(ayarlar.kayıtLOG).send(mesaj31)
+await sleep('0500');
 client.channels.cache.get(ayarlar.kayıtLOG).send(embed2);
 let embed3 = new MessageEmbed()
 .setColor('WHITE')

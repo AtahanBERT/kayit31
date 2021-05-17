@@ -128,6 +128,7 @@ client.on("guildMemberAdd", member => {
 client.on(`guildMemberAdd`, async member => {
   let botrol = ayarlar.botROL;
 if(!member.bot) return;
+member.roles.remove(ayarlar.kayıtsızROL)
 member.roles.add(botrol)
 })
 
