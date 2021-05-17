@@ -84,7 +84,7 @@ let embed2 = new MessageEmbed()
 `)
 .setColor('BLACK')
 .setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true }))
-.setFooter(message.guild.name, message.guild.iconURL)
+.setFooter(message.guild.name, message.guild.iconURL({dynamic: true}))
 .setTimestamp()
 
 

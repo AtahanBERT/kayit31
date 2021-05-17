@@ -191,7 +191,7 @@ if (tarih > 1296000000) kontrol = '<a:extacy_tik2:832661825840742411> Bu KullanÄ
 `)
     .setImage(ayarlar.mesajgif)
     .setTimestamp()
-    .setFooter(guild.name, guild.iconURL)
+    .setFooter(guild.name, guild.iconURL({dynanic: true}))
     
       client.channels.cache.find(x => x.id === kanal).send(`<@&${ayarlar.yetkiliROL}>`)
 client.channels.cache.find(x => x.id === kanal).send(giris)
