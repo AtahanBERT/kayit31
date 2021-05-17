@@ -51,7 +51,7 @@ const emb = new MessageEmbed()
 let tag = ayarlar.tag || ''
 message.guild.members.cache.get(kullanıcı.id).setNickname(`${tag} ${isim} ${yaş}`)
 message.guild.members.cache.get(kullanıcı.id).roles.add(erkekROL)
-message.guild.members.cache.get(kullanıcı.id).roles.add(kayıtlıROL)
+message.guild.members.cache.get(kullanıcı.id).roles.add(kayıtlıROL);
 db.add(`erkek.sayı_${message.author.id}`, +1)
 db.add(`toplam.sayı_${message.author.id}`, +1)
   if(ayarlar.erkekICON) {
@@ -85,7 +85,7 @@ let embed2 = new MessageEmbed()
 .setColor('BLACK')
 .setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true }))
 .setFooter(message.guild.name, message.guild.iconURL)
-
+.setTimestamp()
 
 
 client.channels.cache.get(ayarlar.kayıtLOG).send(mesaj31)
