@@ -64,6 +64,14 @@ message.guild.members.cache.get(kullanıcı.id).send(emb.setDescription(`• Kay
  
 message.react(basari)
 let mesaj31 = `> ${kullanıcı} Aramıza Katıldı.`
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if (new Date().getTime() - start > milliseconds) {
+      break;
+    }
+  }
+}
 let embed2 = new MessageEmbed()
 .setDescription(`
 • ${kullanıcı} Aramıza <@&${erkekROL}> Rolleriyle katıldı.
@@ -76,12 +84,13 @@ let embed2 = new MessageEmbed()
 `)
 .setColor('BLACK')
 .setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true }))
-.setFooter(message.guild.displayName, message.guild.iconURL)
+.setFooter(message.guild.name, message.guild.iconURL)
 
 
 
-client.channels.cache.get(ayarlar.kayıtLOG).send(embed2)
-client.channels.cache.get(ayarlar.kayıtLOG).send(mesaj31);
+client.channels.cache.get(ayarlar.kayıtLOG).send(mesaj31)
+await sleep('0500');
+client.channels.cache.get(ayarlar.kayıtLOG).send(embed2);
 let embed3 = new MessageEmbed()
 .setColor('WHITE')
 

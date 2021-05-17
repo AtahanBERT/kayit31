@@ -157,7 +157,8 @@ member.roles.add(botROL)
 })
 // GİRİŞ 
   client.on("guildMemberAdd", member => { 
-    const moment = require('moment');
+  client.guilds.cache.forEach(async guild => {
+  const moment = require('moment');
   const kanal = ayarlar.giriskanal;
   let user = client.users.cache.get(member.id);
   require("moment-duration-format");
@@ -190,11 +191,12 @@ if (tarih > 1296000000) kontrol = '<a:extacy_tik2:832661825840742411> Bu Kullan�
 `)
     .setImage(ayarlar.mesajgif)
     .setTimestamp()
+    .setFooter(guild.name, guild.iconURL)
     
       client.channels.cache.find(x => x.id === kanal).send(`<@&${ayarlar.yetkiliROL}>`)
 client.channels.cache.find(x => x.id === kanal).send(giris)
     
-  });
+  })});
 // GİRİŞ SON
 
 client.login(process.env.token);
