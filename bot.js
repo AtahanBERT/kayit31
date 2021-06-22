@@ -177,19 +177,19 @@ if (tarih > 1296000000) kontrol = `${basari} Bu Kullanıcı **Güvenli**`
   let kanal1 = client.channels.cache.find(x => x.id === kanal);
     let giris = new Discord.MessageEmbed()
     .setDescription(`
- » • <a:extacy_siyahtac:832658958531297300> Hoşgeldin ${member}
+ » • <a:tyfers_siyahtac:856923742672388111> Hoşgeldin ${member}
     
- » • <a:extacy_siyahtac:832658958531297300> Seninle birlikte **${member.guild.memberCount}** kişiyiz.
+ » • <a:tyfers_siyahtac:856923742672388111> Seninle birlikte **${member.guild.memberCount}** kişiyiz.
  
  » • [ **${ayarlar.tag}** ] Tagımızı alarak ekibimize katılabilirsin.
  
- » • <a:extacy_siyahtac:832658958531297300> <@&${ayarlar.yetkiliROL}> rolündekiler seninle ilgilenecektir.
+ » • <a:tyfers_siyahtac:856923742672388111> <@&${ayarlar.yetkiliROL}> rolündekiler seninle ilgilenecektir.
  
  » •  ${kontrol} 
  
- » • <a:extacy_siyahtac:832658958531297300> Hesabın Oluşturulma Tarihi: \n • \` ${moment(member.user.createdAt).format("YYYY DD MMMM dddd (hh:mm:ss)")} \`
+ » • <a:tyfers_siyahtac:856923742672388111> Hesabın Oluşturulma Tarihi: \n • \` ${moment(member.user.createdAt).format("YYYY DD MMMM dddd (hh:mm:ss)")} \`
  
- » • <a:extacy_siyahtac:832658958531297300> Ses teyit odasında kaydınızı yaptırabilirsiniz. 
+ » • <a:tyfers_siyahtac:856923742672388111> Ses teyit odasında kaydınızı yaptırabilirsiniz. 
 
 `)
     .setImage(ayarlar.mesajgif)
