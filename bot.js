@@ -11,7 +11,7 @@ const app = express();
 const http = require("http");
 var Jimp = require('jimp');
 app.get("/", (request, response) => {
-  response.send(`Bot Aktif | Discord: https://discord.gg/yF6RRnq9Ks | İletisim Veya Uptime Etmek İçin Discordumuza Gelebilirsiniz.`)
+  response.send(`Bot Aktif | Discord: https://discord.gg/2uhYrQYgVt | İletişim Veya Uptime Etmek İçin Discordumuza Gelebilirsiniz.`)
   response.sendStatus(200);
 });
 app.listen(process.env.PORT);
@@ -161,6 +161,8 @@ member.roles.add(botROL)
   client.guilds.cache.forEach(async guild => {
   const moment = require('moment');
   const kanal = ayarlar.giriskanal;
+  let basarisiz = ayarlar.basarisizemoji
+  let basari = ayarlar.basariliemoji
   let user = client.users.cache.get(member.id);
   require("moment-duration-format");
     const tarih = new Date().getTime() - user.createdAt.getTime();  
@@ -169,8 +171,8 @@ member.roles.add(botROL)
  member.roles.add(rol)
 
   var kontrol;
-if (tarih < 1296000000) kontrol = <a:extacy_carp2:832662920491302993> Bu Kullanıcı **Şüpheli**`
-if (tarih > 1296000000) kontrol = '<a:extacy_tik2:832661825840742411> Bu Kullanıcı **Güvenli**`
+if (tarih < 1296000000) kontrol = `${basarisiz} Bu Kullanıcı **Şüpheli**`
+if (tarih > 1296000000) kontrol = `${basari} Bu Kullanıcı **Güvenli**`
   moment.locale("tr");
   let kanal1 = client.channels.cache.find(x => x.id === kanal);
     let giris = new Discord.MessageEmbed()
