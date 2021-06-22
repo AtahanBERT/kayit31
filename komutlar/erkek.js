@@ -49,7 +49,7 @@ const emb = new MessageEmbed()
 .setFooter('Kayıt Saati')
 .setColor(`#fffff0`)
 let tag = ayarlar.tag || ''
-message.guild.members.cache.get(kullanıcı.id).setNickname(`${tag} ${isim} ${yaş}`)
+message.guild.members.cache.get(kullanıcı.id).setNickname(`${tag} ${isim} | ${yaş}`)
 message.guild.members.cache.get(kullanıcı.id).roles.add(erkekROL)
 message.guild.members.cache.get(kullanıcı.id).roles.add(kayıtlıROL);
 db.add(`erkek.sayı_${message.author.id}_${message.guild.id}`, +1)
