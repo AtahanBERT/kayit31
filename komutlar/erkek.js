@@ -12,8 +12,8 @@ exports.run = async (client, message, args) => {
     let kayıtlıROL = ayarlar.kayıtlıROL
     let yetkili = ayarlar.yetkiliROL
     let kayıtLOG = ayarlar.kayıtLOG
-    let kayıtsayı = db.fetch(`erkek.sayı_${message.author.id}`)
-    let tkayıtsayı = db.fetch(`toplam.sayı_${message.author.id}`)
+    let kayıtsayı = db.fetch(`erkek.sayı_${message.author.id}_${message.guild.id}`)
+    let tkayıtsayı = db.fetch(`toplam.sayı_${message.author.id}_${message.guild.id}`)
     let kanal = ayarlar.giriskanal;
   
 if(message.channel.id !== kanal) return message.react(emoji);

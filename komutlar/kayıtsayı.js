@@ -12,8 +12,8 @@ return message.channel.send(new MessageEmbed().setDescription(`${emoji} ${messag
   if(!üye) return message.channel.send(new MessageEmbed().setDescription(`${emoji} ${message.author}, Bir kullanıcı etiketlemelisin.`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}));
   let rol = message.mentions.roles.first()
   let member = message.guild.member(üye)
-  let erkekpuanlar = db.fetch(`erkek.sayı_${üye.id}`)
-  let kadınpuanlar = db.fetch(`kadın.sayı_${üye.id}`)
+  let erkekpuanlar = db.fetch(`erkek.sayı_${üye.id}_${message.guild.id}`)
+  let kadınpuanlar = db.fetch(`kadın.sayı_${üye.id}_${message.guild.id}`)
   let total = kadınpuanlar + erkekpuanlar
   let lecrain = new MessageEmbed()
   .setAuthor(`Kayıt Sayı | Kişi : ${üye.username}`)
