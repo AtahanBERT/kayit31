@@ -169,8 +169,8 @@ member.roles.add(botROL)
  member.roles.add(rol)
 
   var kontrol;
-if (tarih < 1296000000) kontrol = '<a:extacy_carp2:832662920491302993> Bu Kullanıcı **Şüpheli**'
-if (tarih > 1296000000) kontrol = '<a:extacy_tik2:832661825840742411> Bu Kullanıcı **Güvenli**'
+if (tarih < 1296000000) kontrol = <a:extacy_carp2:832662920491302993> Bu Kullanıcı **Şüpheli**`
+if (tarih > 1296000000) kontrol = '<a:extacy_tik2:832661825840742411> Bu Kullanıcı **Güvenli**`
   moment.locale("tr");
   let kanal1 = client.channels.cache.find(x => x.id === kanal);
     let giris = new Discord.MessageEmbed()
