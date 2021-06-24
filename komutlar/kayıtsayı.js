@@ -6,7 +6,7 @@ let basari = ayarlar.basariliemoji;
 exports.run = async (client, message, args) => {
     
 if(!message.member.roles.cache.has(ayarlar.yetkiliROL) & !message.member.hasPermission("ADMINISTRATOR")) 
-return message.channel.send(new MessageEmbed().setDescription(`${emoji} ${message.author}, Bu işlemi sadece yetkililer yapabilir`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
+return message.channel.send(new MessageEmbed().setDescription(`${emoji} ${message.author}, Bu işlemi sadece yetkililer yapabilir.`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
 
   let üye = message.mentions.users.first() || message.author
   if(!üye) return message.channel.send(new MessageEmbed().setDescription(`${emoji} ${message.author}, Bir kullanıcı etiketlemelisin.`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}));
@@ -19,9 +19,9 @@ return message.channel.send(new MessageEmbed().setDescription(`${emoji} ${messag
   .setAuthor(`Kayıt Sayı | Kişi : ${üye.username}`)
   .setColor('BLACK')
   .setDescription(`
-<a:mega:828241745862066206> Toplam Kadın Kayıtı Sayın : **${kadınpuanlar ? kadınpuanlar : 'Hiç Kadın Birini Kayıt Etmedin'}** 
+<a:mega:828241745862066206> Toplam Kadın Kayıt Sayın : **${kadınpuanlar ? kadınpuanlar : 'Hiç Kadın Birini Kayıt Etmedin'}** 
 
-<a:mega:828241745862066206> Toplam Erkek Kayıtı Sayın : **${erkekpuanlar ? erkekpuanlar : 'Hiç Erkek Birini Kayıt Etmedin'}** 
+<a:mega:828241745862066206> Toplam Erkek Kayıt Sayın : **${erkekpuanlar ? erkekpuanlar : 'Hiç Erkek Birini Kayıt Etmedin'}** 
 
 <a:mega:828241745862066206> Tüm Sayı Toplamları : **${total ? total : 'Kayıt Sayın Yok'}**
   `)
