@@ -12,7 +12,6 @@ const http = require("http");
 var Jimp = require('jimp');
 app.get("/", (request, response) => {
   response.send(`Bot Aktif | Discord: https://discord.gg/2uhYrQYgVt | İletişim Veya Uptime Etmek İçin Discordumuza Gelebilirsiniz.`)
-  response.sendStatus(200);
 });
 app.listen(process.env.PORT);
 setInterval(() => {
