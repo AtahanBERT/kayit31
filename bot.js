@@ -173,22 +173,23 @@ member.roles.add(botROL)
 if (tarih < 1296000000) kontrol = `${basarisiz} Bu Kullanıcı **Şüpheli**`
 if (tarih > 1296000000) kontrol = `${basari} Bu Kullanıcı **Güvenli**`
   moment.locale("tr");
+  let emoji = ayarlar.mesajemoji
   let kanal1 = client.channels.cache.find(x => x.id === kanal);
     let giris = new Discord.MessageEmbed()
     .setDescription(`
- » • <a:tyfers_siyahtac:856923742672388111> Hoşgeldin ${member}
+ » • ${emoji} Hoşgeldin ${member}
     
- » • <a:tyfers_siyahtac:856923742672388111> Seninle birlikte **${member.guild.memberCount}** kişiyiz.
+ » • ${emoji} Seninle birlikte **${member.guild.memberCount}** kişiyiz.
  
  » • [ **${ayarlar.tag}** ] Tagımızı alarak ekibimize katılabilirsin.
  
- » • <a:tyfers_siyahtac:856923742672388111> <@&${ayarlar.yetkiliROL}> rolündekiler seninle ilgilenecektir.
+ » • ${emoji} <@&${ayarlar.yetkiliROL}> rolündekiler seninle ilgilenecektir.
  
  » •  ${kontrol} 
  
- » • <a:tyfers_siyahtac:856923742672388111> Hesabın Oluşturulma Tarihi: \n • \` ${moment(member.user.createdAt).format("YYYY DD MMMM dddd (hh:mm:ss)")} \`
+ » • ${emoji} Hesabın Oluşturulma Tarihi: \n • \` ${moment(member.user.createdAt).format("YYYY DD MMMM dddd (hh:mm:ss)")} \`
  
- » • <a:tyfers_siyahtac:856923742672388111> Ses teyit odasında kaydınızı yaptırabilirsiniz. 
+ » • ${emoji} Ses teyit odasında kaydınızı yaptırabilirsiniz. 
 
 `)
     .setImage(ayarlar.mesajgif)
