@@ -18,7 +18,8 @@ let yaş = args[2]
 let kullanici = message.guild.member(message.mentions.members.first() || message.guild.members.cache.get(args[0]));
   
 if(!kullanici) return message.channel.send(new Discord.MessageEmbed().setDescription(`${basarisiz} ${message.author}, Bir kullanıcı etiketlemelisin.`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}));
-
+if(kullanici.roles.cache.get(ayarlar.erkekROL)) let rol = erkekrol
+  
 if(message.member.roles.highest.position <= kullanici.roles.highest.position) return message.channel.send(new Discord.MessageEmbed().setDescription(`${basarisiz}  ${message.author}, Etiketlenen kullanıcı sizden üst/aynı pozisyondadır.`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}));
 if(!kullanici) return message.channel.send(new Discord.MessageEmbed().setDescription(`${basarisiz} ${message.author}, Bir kullanıcı etiketlemelisin.`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}));
 if(!isim) return message.channel.send(new Discord.MessageEmbed().setDescription(`${basarisiz} ${message.author}, Üyenin ismini belirtmelisin.`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}));
@@ -29,7 +30,7 @@ message.guild.members.cache.get(kullanici.id).setNickname(`${tag} ${isim} | ${ya
 message.channel.send(new Discord.MessageEmbed().setDescription(`${basari} ${message.author}, Başarılı bir şekilde ${kullanici} adlı kişinin kullanıcı adı \`${isim} | ${yaş}\` olarak değiştirildi.`).setAuthor(message.member.displayName, message.author.avatarURL({dynamic: true})).setColor('0x348f36').setTimestamp())
 message.react('✅');
   
-db.push(`isim.${message.guild.id}`, {userID: kullanici.id, isim: isim, yas: yaş, role: erkekrol})
+db.push(`isim.${message.guild.id}`, {userID: kullanici.id, isim: isim, yas: yaş, role: rol})
 }
 
 exports.conf = {
