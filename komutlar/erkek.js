@@ -4,7 +4,7 @@ const ayarlar = require('../ayarlar.json')
 const emoji = ayarlar.basarisizemoji;
 const basari = ayarlar.basariliemoji;
 
-exports.off = async (client, message, args) => {
+exports.run = async (client, message, args) => {
 
     let erkekROL = ayarlar.erkekROL
     let fakeROL = ayarlar.fakeROL
@@ -54,6 +54,7 @@ message.guild.members.cache.get(kullanıcı.id).roles.add(erkekROL)
 message.guild.members.cache.get(kullanıcı.id).roles.add(kayıtlıROL);
 db.add(`erkek.sayı_${message.author.id}_${message.guild.id}`, +1)
 db.add(`toplam.sayı_${message.author.id}_${message.guild.id}`, +1)
+db.add(`erkek.rol_${message.guild.id}`, ayarlar.erkekROL)
   if(ayarlar.erkekICON) {
     let erkekICON = ayarlar.erkekICON
       message.guild.members.cache.get(kullanıcı.id).roles.add(erkekICON)

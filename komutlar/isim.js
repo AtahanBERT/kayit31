@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const db = require('quick.db')
 const client = new Discord.Client();
 const ayarlar = require('../ayarlar.json');
 const prefix = ayarlar.prefix
@@ -11,6 +12,7 @@ if (!message.member.roles.cache.get(ayarlar.yetkiliROL) & !message.member.hasPer
 return message.channel.send(new Discord.MessageEmbed().setDescription(`${basarisiz} ${message.author} Komutu kullanmak için yetkin bulunmamakta.`).setColor('0x800d0d').setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setTimestamp()).then(x => x.delete({timeout: 5000})); 
 
 let tag = ayarlar.tag;
+let erkekrol = db.fetch(`erkek.rol_${message.guild.id}`);
 let isim = args[1]
 let yaş = args[2]
 let kullanici = message.guild.member(message.mentions.members.first() || message.guild.members.cache.get(args[0]));
@@ -26,6 +28,8 @@ if(isim.length > 32) return message.channel.send(new Discord.MessageEmbed().setD
 message.guild.members.cache.get(kullanici.id).setNickname(`${tag} ${isim} | ${yaş}`)
 message.channel.send(new Discord.MessageEmbed().setDescription(`${basari} ${message.author}, Başarılı bir şekilde ${kullanici} adlı kişinin kullanıcı adı \`${isim} | ${yaş}\` olarak değiştirildi.`).setAuthor(message.member.displayName, message.author.avatarURL({dynamic: true})).setColor('0x348f36').setTimestamp())
 message.react('✅');
+  
+db.push(`isim.${message.guild.id}`, {userID: kullanici.id, isim: isim, yas: yaş, role: erkekrol})
 }
 
 exports.conf = {
