@@ -110,7 +110,7 @@ client.elevation = message => {
 
 // İSİM YAŞ İSİM DEĞİŞTİRME 
 
-client.on("guildMemberAdd", member => {
+client.off("guildMemberAdd", member => {
   let tag = ayarlar.tag;
   member.setNickname(`${tag}` + `${ayarlar.kayitsizad}`);
 });
@@ -156,7 +156,7 @@ member.roles.add(botROL)
 }
 })
 // GİRİŞ 
-  client.on("guildMemberAdd", member => { 
+  client.off("guildMemberAdd", member => { 
   let guild = client.guilds.cache.get(ayarlar.sunucuID)
   const moment = require('moment');
   const kanal = ayarlar.giriskanal;
