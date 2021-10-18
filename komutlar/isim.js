@@ -12,7 +12,6 @@ if (!message.member.roles.cache.get(ayarlar.yetkiliROL) & !message.member.hasPer
 return message.channel.send(new Discord.MessageEmbed().setDescription(`${basarisiz} ${message.author} Komutu kullanmak için yetkin bulunmamakta.`).setColor('0x800d0d').setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setTimestamp()).then(x => x.delete({timeout: 5000})); 
 
 let tag = ayarlar.tag;
-
 let isim = args[1]
 let yaş = args[2]
 let kullanici = message.guild.member(message.mentions.members.first() || message.guild.members.cache.get(args[0]));

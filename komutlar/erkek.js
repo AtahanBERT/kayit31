@@ -54,7 +54,6 @@ message.guild.members.cache.get(kullanıcı.id).roles.add(erkekROL)
 message.guild.members.cache.get(kullanıcı.id).roles.add(kayıtlıROL);
 db.add(`erkek.sayı_${message.author.id}_${message.guild.id}`, +1)
 db.add(`toplam.sayı_${message.author.id}_${message.guild.id}`, +1)
-db.set(`erkek.rol_${message.guild.id}`, ayarlar.erkekROL)
   if(ayarlar.erkekICON) {
     let erkekICON = ayarlar.erkekICON
       message.guild.members.cache.get(kullanıcı.id).roles.add(erkekICON)
