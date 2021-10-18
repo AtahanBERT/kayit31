@@ -196,7 +196,7 @@ if (tarih > 1296000000) kontrol = `${basari} Bu Kullanıcı **Güvenli**`
     .setTimestamp()
     .setFooter(guild.name, guild.iconURL({dynamic: true}))
     
-      client.channels.cache.find(x => x.id === kanal).send(`<@&${ayarlar.yetkiliROL}>`)
+client.channels.cache.find(x => x.id === kanal).send(`<@&${ayarlar.yetkiliROL}>`)
 client.channels.cache.find(x => x.id === kanal).send(giris)
     
   });
