@@ -4,7 +4,7 @@ const ayarlar = require('../ayarlar.json')
 const emoji = ayarlar.basarisizemoji;
 const basari = ayarlar.basariliemoji;
 
-exports.off = async (client, message, args) => {
+exports.run = async (client, message, args) => {
 
     let erkekROL = ayarlar.erkekROL
     let fakeROL = ayarlar.fakeROL
@@ -34,13 +34,6 @@ if (kullanıcı.bot) return;
 if (kurulus < 1296000000) kontrol = `${emoji} Şüpheli`
 if (kurulus > 1296000000) kontrol = `${basari} Güvenli`
   
-  
-  
-let isim = args[1]
-if(!isim) return message.channel.send(new MessageEmbed().setDescription(`${emoji} ${message.author}, Üyenin ismini belirtmelisin.`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
-
-let yaş = args[2];
-if(!yaş) return message.channel.send(new MessageEmbed().setDescription(`${emoji} ${message.author}, Üyenin yaşını belirtmelisin.`).setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true })).setColor('0x800d0d').setTimestamp()).then(x => x.delete({timeout: 5000}))
 
 const emb = new MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL())
@@ -48,8 +41,6 @@ const emb = new MessageEmbed()
 .setTimestamp()
 .setFooter('Kayıt Saati')
 .setColor(`#fffff0`)
-let tag = ayarlar.tag || ''
-message.guild.members.cache.get(kullanıcı.id).setNickname(`${tag} ${isim} | ${yaş}`)
 message.guild.members.cache.get(kullanıcı.id).roles.add(erkekROL)
 message.guild.members.cache.get(kullanıcı.id).roles.add(kayıtlıROL);
 db.add(`erkek.sayı_${message.author.id}_${message.guild.id}`, +1)
@@ -96,13 +87,11 @@ let embed3 = new MessageEmbed()
 
 .setDescription(`
 • ${kullanıcı} adlı kişinin kaydı başarıyla yapıldı.
-• İsim Yaş • **${isim} ${yaş}**
 • Verilen Roller • <@&${ayarlar.erkekROL}>
 • Alınan Roller • <@&${ayarlar.kayıtsızROL}>`)
 .setFooter((`Toplam Erkek Kayıt Sayın: ${kayıtsayı ? `${kayıtsayı}` : "0"}`) + (`\nToplam Kayıt Sayın: ${tkayıtsayı ? `${tkayıtsayı}` : "0"}`), message.author.avatarURL({ dynamic: true, format: 'png', size: 1024 }))
 
-message.channel.send(embed3)
-db.push(`isim.${message.guild.id}`, {userID: kullanıcı.id, isim: isim, yas: yaş, role: ayarlar.erkekROL})}
+message.channel.send(embed3)}
 exports.conf = {
   enabled: true,
   guildOnly: false,
@@ -112,4 +101,4 @@ exports.conf = {
 
 exports.help = {
   name: 'erkek'
-}
+};
