@@ -122,25 +122,13 @@ client.off("guildMemberAdd", member => {
 
 
 
-//BOT ROLÜ
-
-client.on(`guildMemberAdd`, async member => {
-  let botrol = ayarlar.botROL;
-if(!member.bot) return;
-member.roles.remove(ayarlar.kayıtsızROL)
-member.roles.add(botrol)
-})
-
-// BOT ROLÜ SON
-
-
 
 
 // kayıtsız rolü
 
 client.on(`guildMemberAdd`, async member => {
   let kayıtsızROL = ayarlar.kayıtsızROL;
-if(member.bot) return;
+if(member.user.bot) return;
 member.roles.add(kayıtsızROL)
 })
 
